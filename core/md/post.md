@@ -9,4 +9,4 @@ description: Post template.
 
 # {{ page.title }} title
 
-`// post content`
+`// post content in markdown`

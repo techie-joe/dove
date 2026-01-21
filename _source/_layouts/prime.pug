@@ -6,6 +6,8 @@ block main_style
 block body
   main._view: ._layout._main_layout.container-lg.px-3.my-3.markdown-body: block main
     +main_block
+      block header
+        .h1: +include('header','header.md','','')
   aside._view._topbar_view: ._layout._topbar_layout.container-lg.px-3: block topbar
     +topbar
   aside._view._lowbar_view: ._layout._lowbar_layout.container-lg.px-3: block lowbar

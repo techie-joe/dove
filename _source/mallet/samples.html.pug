@@ -5,43 +5,31 @@ block append vars
   - description = `Theme samples.`
 block append style
   style.
-    ._article h2:first-of-type {
-      border:0;
-      margin-bottom:2rem;
-      margin-top:-0.5em;
-    }
-    ._article #icon {
-      position: absolute;
-      font-size:1em;
-      opacity:.2;
-      right:10em;
-      line-height:1;
-      z-index:-1;
-      top:5em;
-      scale:14;
-    }
+    ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
+    ._article h2.desc { border:0;margin-top:-0.7em }
 block content
-  .relative: #icon !{icon}
+  .relative: ._bimoji !{icon}
   - title  = `Theme samples`
-  - description = `Essential templates for any website.`
+  - description = `Essential templates for any website`
   h1.hero !{title}
-  h2 !{icon} !{removeLastDot(description)}
+  h2.desc !{icon} !{removeLastDot(description)}
+  p| #[strong #[a(href="./preview") Preview the theme]] to see how it looks and #[strong #[a(href="./#how-to-use") start using it]] today!
 
+  div(style="margin-top:3rem")
+
+  h2 Starters
   nav.mv
     b Html
     +itext|:
     +site_nav(layout_name)
-
   nav.mv
     b Md
     +itext|:
     +site_nav(layout_name+'/md')
 
   div(style="margin-top:3rem")
-  p.
-    #[strong #[a(href="./preview") Preview the theme]] to see how it looks and #[strong #[a(href="./#how-to-use") start using it]] today!
 
-  +thin_hr
+  h2 Miscellaneous
   nav.mv
     +test_nav(layout_name)
 

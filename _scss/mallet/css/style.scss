@@ -18,9 +18,9 @@ $pre_bg  : #f4f4f4;
 %std_border { border-color:$grey_border }
 %std_margin { margin:1em 0 }
 // ---------------------------------------------------------------
-body { @extend .scrollable; }
+body { color:$text_color;@extend .scrollable; }
+._body_layout { margin:0 }
 ._app { overflow:initial;position:initial }
-body { color:$text_color }
 ._b,b,strong { color:color.adjust($text_color, $lightness: 5%) }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#000 }
 hr { border-width:2px; &.thin { border-width:1px } }
@@ -53,6 +53,7 @@ article {
 }
 .markdown-body {
   & { margin-top:0 !important } // to align with top bar
+  h1,h2,h3,h4,h5,h6,.h1,.h2 { padding-top:.3em }
   code,tt,kbd { background-color:$code_bg;color:$code_tc }
   pre { code,tt { @extend .no_bg;@extend .inherit_color; } }
   blockquote { box-shadow:none }
@@ -69,10 +70,11 @@ article {
     pre { @extend .ma0; }
     .hll { background-color:rgba(#fa0,.2) }
   }
+  ._header .h1 { padding:0;font-size:1.2em !important }
 }
 ._header {
-  h1 { @extend .mt0;@extend .ba0; } // logo holder
-  ._logo a { @extend .block;padding:.25rem;margin:-.25rem; }
+  .h1 { @extend .mt0;@extend .ba0; } // logo holder
+  ._logo a { @extend .no_u;@extend .block;padding:.25rem;margin:-.25rem; }
 }
 ._common_nav a,
 ._logo a,

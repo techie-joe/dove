@@ -2,27 +2,17 @@ extends _html
 block append vars
   - path   = 'home.html'
   - title  = `Home`
-  - description = 'Home template'
+  - description = 'Home template in html.'
 block append style
   style.
     #hero_block { padding:1rem 2rem }
-    #hero_block h1 { margin-top:1rem }
+    #hero_block h1 { padding-top:0;margin-top:1rem }
     #hero_block h2 { border:0;font-weight:normal;font-size:1.2em;margin-top:1rem }
-    #hero_block #icon {
-      position: absolute;
-      font-size:1em;
-      opacity:.2;
-      right:10em;
-      line-height:1;
-      z-index:-1;
-      top:5em;
-      scale:14;
-    }
 block content
   #hero_block.box.no_overflow
-    .relative: #icon !{icon}
+    .relative: ._bimoji !{icon}
     h1 !{icon} Site title
     h2 Site slogan or description
 
   +thin_hr
-  p: code // home content
+  p: code // home content in html

@@ -11,8 +11,8 @@ description: We can't find what you are looking for.
 <!-- source      : _source/_layouts/core.pug -->
 <!-- title       : {{ page.title | default: site.title | default: "(untitled)" }} -->
 <!-- description : {{ page.description | default: site.description | default: "(undescribed)" }} -->
-<!-- copyright   : @ {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
-<html class="no_js _core_layout" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+<!-- copyright   : {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
+<html class="_core_layout no_js" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
   <head>
     <meta charset="{{ site.encoding | default: 'utf-8' }}"/>
 {% seo %}
@@ -21,6 +21,15 @@ description: We can't find what you are looking for.
     <meta id="_theme_color" name="theme-color" content="{{ page.theme_color | default: site.theme_color | default: '' }}"/>
     <meta id="_color_scheme" name="color-scheme" content="{{ page.color_scheme | default: site.color_scheme | default: 'light dark' }}"/>
     <style>.isvg svg { width:1em;height:1em }</style>
+    <style>.hold { display:none }</style>
+    <script>
+      ((d=document)=>{
+        const c=(d.documentElement||d.body).classList;
+        c.add('hold');
+        d.addEventListener('DOMContentLoaded',_=>{c.remove('hold')});
+      })();
+      
+    </script>
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/core/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
 {% include layout_head.html %}
 <!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
@@ -31,7 +40,7 @@ description: We can't find what you are looking for.
         <div class="_layout _main_layout">
           <header class="_header">
             <div class="_layout _header_layout">
-              <h1>{% include dove/logo.html name="core" %}</h1>
+              <div class="h1">{% include dove/logo.html name="core" %}</div>
             </div>
           </header>
           <nav class="_nav">
@@ -39,7 +48,7 @@ description: We can't find what you are looking for.
               <div class="mv"><a href="{{ site.baseurl }}/core/samples">Samples</a><i class="icon"><i class="isvg">
                     <svg viewBox="0 0 24 24">
                       <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                    </svg></i></i><b>Html</b><i class="icon"><i class="itext">:</i></i><a href="{{ site.baseurl }}/core/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><b>404</b>
+                    </svg></i></i><a href="{{ site.baseurl }}/core/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><b>404</b>
               </div>
               <hr class="thin"/>
             </div>
@@ -71,7 +80,7 @@ description: We can't find what you are looking for.
         </div>
       </aside>
 {% include layout_body.html %}
-      <script>((de=document.documentElement)=>de.className=de.className.replace('no_js','js'))();</script>
+      <script>((de=document.documentElement)=>{de.className=de.className.replace('no_js','js')})();</script>
     </div>
   </body>
 </html>

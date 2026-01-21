@@ -5,13 +5,11 @@ block append update_vars
 block prepend front_matter
   +l| index: false
 block header
-  h1|{% include dove/logo.html name="!{layout_name}" %}
+  .h1|{% include dove/logo.html name="!{layout_name}" %}
 block nav
-  div.mv
+  .mv
     +sn(layout_name+"/samples") Samples
     +angle
-    b Html
-    +itext|:
     +site_nav(layout_name)
   +thin_hr
 block footer

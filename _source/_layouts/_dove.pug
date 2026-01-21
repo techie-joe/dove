@@ -70,6 +70,32 @@ mixin _angle
 //- mixins
 //- ==============================================================
 
+mixin holdBody
+  style.
+    .hold { display:none }
+  script.
+    ((d=document)=>{
+      const c=(d.documentElement||d.body).classList;
+      c.add('hold');
+      d.addEventListener('DOMContentLoaded',_=>{c.remove('hold')});
+    })();
+
+mixin fadeInBody
+  style.
+    .fade { transition:opacity .5s linear }
+    .fadeOut { opacity:0 }
+    @media (prefers-reduced-motion: reduce) {
+      .fadeOut { transition:none }
+    }
+  script.
+    ((d=document)=>{
+      const c=(d.documentElement||d.body).classList;
+      c.add('fade','fadeOut');
+      d.addEventListener('DOMContentLoaded',_=>{
+        c.remove('fadeOut');setTimeout(_=>c.remove('fade'),500);
+      });
+    })();
+
 mixin thin_hr
   hr.thin/
 
@@ -134,15 +160,3 @@ mixin post_footer
     hr
     h2 Other posts
     +include('posts','posts.md')
-
-//- ==============================================================
-
-//- mixin fouc
-  style.
-    ._fouc { visibility: hidden !important }
-  script.
-    ((d=document,q=(d.documentElement||d.body).classList,c='_fouc',x='_tx')=>{
-      q.add(c,x);d.addEventListener('DOMContentLoaded',e=>{
-        setTimeout(e=>{q.remove(c);q.remove(x)},300);
-      });
-    })();

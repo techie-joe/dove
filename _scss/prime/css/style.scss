@@ -20,6 +20,7 @@ $pre_bg  : #f4f4f4;
 // ---------------------------------------------------------------
 body { @extend .scroll_y; }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#000 }
+.h1,.h2 { padding-bottom:.3em;border-bottom:1px solid $grey_border; }
 u,a,abbr { text-underline-offset:.15em }
 details { 
   & { @extend %std_margin; }
@@ -41,6 +42,7 @@ article {
   }
   h1,h2 { @extend %std_border; }
   h5,h6 { color:inherit }
+  h1,h2,h3,h4,h5,h6,.h1,.h2 { padding-top:.3em }
   p { @extend %std_margin; }
   blockquote { @extend %std_border;@extend .inherit_color; }
   pre,code,tt,samp,kbd { @extend .mono; }
@@ -130,6 +132,8 @@ $dark_pre_bg  : #171717;
   body { color:color.invert($text_color);@extend %dark_std_bg; }
   b,strong { color:color.adjust($dark_text_color, $lightness: 10%) }
   h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#fff }
+  .h1,.h2 { @extend %dark_std_border; }
+
   .markdown-body {
     hr { border-color:color.invert($grey_border) }
     h1,h2 { @extend %dark_std_border; }

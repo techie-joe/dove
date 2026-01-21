@@ -2,23 +2,9 @@ extends _html
 block append vars
   - path   = 'index.html'
 block append style
-  //- style.
-    @media (prefers-color-scheme: dark) {
-      html,body { background-color:#000 }
-    }
   style.
-    ._header h1 { margin-top:1em }
-    ._header h2 { padding-bottom:1.3em;margin-top:-0.7em }
-    ._header #icon {
-      position: absolute;
-      font-size:1em;
-      opacity:.2;
-      right:10em;
-      line-height:1;
-      z-index:-1;
-      top:5em;
-      scale:14;
-    }
+    ._header h1 { padding-top:.3em;margin-top:1rem }
+    ._header .desc { padding-bottom:1.3em;margin-top:-0.7em }
     #pages_ ul,
     #posts_ ul,
     .markdown-body .rapat { margin:1rem 0;padding-left:1.3em }
@@ -26,8 +12,11 @@ block append style
     #posts_ ul li,
     .markdown-body .rapat li { margin-left:0 }
 block header
-  .relative: #icon !{icon}
-  h1 🕊️ The {{ site.title }} Project
+  //- no header
+  +hide_header
+block nav
+  //- no nav
+  +hide_nav
 mixin index_nav(ref)
   b: +sn(ref+"/")| !{capitalize(ref)}
   +angle
@@ -35,9 +24,12 @@ mixin index_nav(ref)
   +bull
   +sn(ref+"/samples")| Samples
 block content
+  .relative: ._bimoji !{icon}
+  h1 🕊️ The {{ site.title }} Project
+  //- p.desc {{ site.description }}
   .flex(style="gap:3rem")
     .fill#themes_
-      h3.mt-0 Themes
+      //- h3.mt-0 Themes
       p.text-grey We are working on the following themes.
       ul.rapat
         li: +index_nav('core')
@@ -50,7 +42,7 @@ block content
   //- - exclude_posts = [ ].join(",");
   +capture('pages')|{% include pages.md exclude="!{exclude_pages}" %}
   +capture('posts')|{% include posts.md exclude="!{exclude_posts}" %}
-  .flex(style="gap:3rem;flex-flow:wrap")
+  .flex(style="gap:1rem;flex-flow:wrap")
     #pages_(style="min-width:250px")
       h3.mt-0 Pages
       |{{ pages | markdownify }}

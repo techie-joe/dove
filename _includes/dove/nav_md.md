@@ -10,8 +10,6 @@
 {%- assign _path = _main %}
 [Samples]({{ site.baseurl }}/{{ _main }})
 {{- angle -}}
-**Md**
-{{- colon -}}
 {%- assign _path = _home | append: '.md' %}
 {%- if page.path == _path -%}
 **Home**{%- else %}[Home]({{ site.baseurl }}/{{ _home }})

@@ -3,7 +3,7 @@ index: false
 layout: raw
 use_pug: true
 title: Home
-description: Home template
+description: Home template in html.
 ---
 <!DOCTYPE html>
 <!-- path        : {{ page.path }} -->
@@ -11,8 +11,8 @@ description: Home template
 <!-- source      : _source/_layouts/core.pug -->
 <!-- title       : {{ page.title | default: site.title | default: "(untitled)" }} -->
 <!-- description : {{ page.description | default: site.description | default: "(undescribed)" }} -->
-<!-- copyright   : @ {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
-<html class="no_js _core_layout" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+<!-- copyright   : {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
+<html class="_core_layout no_js" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
   <head>
     <meta charset="{{ site.encoding | default: 'utf-8' }}"/>
 {% seo %}
@@ -21,21 +21,20 @@ description: Home template
     <meta id="_theme_color" name="theme-color" content="{{ page.theme_color | default: site.theme_color | default: '' }}"/>
     <meta id="_color_scheme" name="color-scheme" content="{{ page.color_scheme | default: site.color_scheme | default: 'light dark' }}"/>
     <style>.isvg svg { width:1em;height:1em }</style>
+    <style>.hold { display:none }</style>
+    <script>
+      ((d=document)=>{
+        const c=(d.documentElement||d.body).classList;
+        c.add('hold');
+        d.addEventListener('DOMContentLoaded',_=>{c.remove('hold')});
+      })();
+      
+    </script>
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/core/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
     <style>
       #hero_block { padding:1rem 2rem }
-      #hero_block h1 { margin-top:1rem }
+      #hero_block h1 { padding-top:0;margin-top:1rem }
       #hero_block h2 { border:0;font-weight:normal;font-size:1.2em;margin-top:1rem }
-      #hero_block #icon {
-        position: absolute;
-        font-size:1em;
-        opacity:.2;
-        right:10em;
-        line-height:1;
-        z-index:-1;
-        top:5em;
-        scale:14;
-      }
     </style>
 {% include layout_head.html %}
 <!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
@@ -46,7 +45,7 @@ description: Home template
         <div class="_layout _main_layout">
           <header class="_header">
             <div class="_layout _header_layout">
-              <h1>{% include dove/logo.html name="core" %}</h1>
+              <div class="h1">{% include dove/logo.html name="core" %}</div>
             </div>
           </header>
           <nav class="_nav">
@@ -54,7 +53,7 @@ description: Home template
               <div class="mv"><a href="{{ site.baseurl }}/core/samples">Samples</a><i class="icon"><i class="isvg">
                     <svg viewBox="0 0 24 24">
                       <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                    </svg></i></i><b>Html</b><i class="icon"><i class="itext">:</i></i><b>Home</b><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/404">404</a>
+                    </svg></i></i><b>Home</b><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/404">404</a>
               </div>
               <hr class="thin"/>
             </div>
@@ -63,13 +62,13 @@ description: Home template
             <div class="_layout _article_layout">
               <div class="box no_overflow" id="hero_block">
                 <div class="relative">
-                  <div id="icon">💎</div>
+                  <div class="_bimoji">💎</div>
                 </div>
                 <h1>💎 Site title</h1>
                 <h2>Site slogan or description</h2>
               </div>
               <hr class="thin"/>
-              <p><code>// home content</code></p>
+              <p><code>// home content in html</code></p>
             </div>
           </article>
           <footer class="_footer">
@@ -96,7 +95,7 @@ description: Home template
         </div>
       </aside>
 {% include layout_body.html %}
-      <script>((de=document.documentElement)=>de.className=de.className.replace('no_js','js'))();</script>
+      <script>((de=document.documentElement)=>{de.className=de.className.replace('no_js','js')})();</script>
     </div>
   </body>
 </html>

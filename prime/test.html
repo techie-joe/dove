@@ -11,8 +11,8 @@ description: Test page.
 <!-- source      : _source/_layouts/prime.pug -->
 <!-- title       : {{ page.title | default: site.title | default: "(untitled)" }} -->
 <!-- description : {{ page.description | default: site.description | default: "(undescribed)" }} -->
-<!-- copyright   : @ {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
-<html class="no_js _prime_layout" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
+<!-- copyright   : {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
+<html class="_prime_layout no_js" lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
   <head>
     <meta charset="{{ site.encoding | default: 'utf-8' }}"/>
 {% seo %}
@@ -21,6 +21,15 @@ description: Test page.
     <meta id="_theme_color" name="theme-color" content="{{ page.theme_color | default: site.theme_color | default: '' }}"/>
     <meta id="_color_scheme" name="color-scheme" content="{{ page.color_scheme | default: site.color_scheme | default: 'light dark' }}"/>
     <style>.isvg svg { width:1em;height:1em }</style>
+    <style>.hold { display:none }</style>
+    <script>
+      ((d=document)=>{
+        const c=(d.documentElement||d.body).classList;
+        c.add('hold');
+        d.addEventListener('DOMContentLoaded',_=>{c.remove('hold')});
+      })();
+      
+    </script>
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/prime/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
 {% include layout_head.html %}
 <!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
@@ -31,13 +40,13 @@ description: Test page.
         <div class="_layout _main_layout container-lg px-3 my-3 markdown-body">
           <header class="_header">
             <div class="_layout _header_layout">
-              <h1>{% include dove/logo.html name="prime" %}</h1>
+              <div class="h1">{% include dove/logo.html name="prime" %}</div>
             </div>
           </header>
           <nav class="_nav">
             <div class="_layout _nav_layout">
-              <nav class="mv"><a href="{{ site.baseurl }}/prime/">About</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/samples">Samples</a>
-              </nav>
+              <div class="mv"><a href="{{ site.baseurl }}/prime/">About</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/samples">Samples</a>
+              </div>
               <hr class="thin"/>
             </div>
           </nav>
@@ -68,7 +77,7 @@ description: Test page.
         </div>
       </aside>
 {% include layout_body.html %}
-      <script>((de=document.documentElement)=>de.className=de.className.replace('no_js','js'))();</script>
+      <script>((de=document.documentElement)=>{de.className=de.className.replace('no_js','js')})();</script>
     </div>
   </body>
 </html>

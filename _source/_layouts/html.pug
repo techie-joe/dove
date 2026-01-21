@@ -20,7 +20,7 @@ mixin main_style
 
 mixin main_block
   header._header: ._layout._header_layout: block header
-    +include('header','header.md')
+    +include('header','header.md','','')
   nav._nav: ._layout._nav_layout: block nav
     +include('nav','nav.md')
   article._article: ._layout._article_layout: block content
@@ -43,8 +43,8 @@ block html
   +l|<!-- source      : _source/_layouts/!{ layout_name }!{ layout_type } -->
   +l|<!-- title       : {{ page.title | default: site.title | default: "(untitled)" }} -->
   +l|<!-- description : {{ page.description | default: site.description | default: "(undescribed)" }} -->
-  +l|<!-- copyright   : @ {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
-  html(lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class=`no_js _${ layout_name }_layout`)
+  +l|<!-- copyright   : {{ site.author | default: site.github.owner_display_name | default:'(unknown)' }} {{ "now" | date: "%Y" }} -->
+  html(lang="{{ page.lang | default: site.lang | default: 'en-US' }}" class=`_${ layout_name }_layout no_js`)
     head: block head
       meta(charset="{{ site.encoding | default: 'utf-8' }}")/
       +l|{% seo %}
@@ -55,6 +55,7 @@ block html
       block style
         style.
           .isvg svg { width:1em;height:1em }
+        +holdBody
         block main_style
       +l|{% include layout_head.html %}
       +l|<!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
@@ -69,4 +70,4 @@ block html
         +l|{% include layout_body.html %}
       block script
         script.
-          ((de=document.documentElement)=>de.className=de.className.replace('no_js','js'))();
+          ((de=document.documentElement)=>{de.className=de.className.replace('no_js','js')})();

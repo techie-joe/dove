@@ -15,7 +15,7 @@ Welcome to the demo! This page provide a glimpse of the theme's appearance. The 
 **You may notice some gibberish text in this demo.** It's just a placeholder content added to help you visualize how the layout, spacing and typography will appear once real content is in place. The gibberish text itself doesn't carry any meaning, it's simply there to fill the empty areas and make the overall design feel balanced and complete. Each line and section shows something different, though none of it is meant to be understood literally. It's more of a creative illusion, a way to showcase how color, contrast, and structure come together to create a theme. It honors the "look-and-feel" metaphor for how design can shift and vary in perspective. That's the beauty of visual design. Every layout tells its own silent story, even when the words themselves means nothing at all.
 {: .indent.text-justify.text-grey }
 
-> [Open the legacy demo page](legacy) or see how you can [start using it](./#how-to-use) today!
+> [Open the classic demo page](classic) or see how you can [start using it](./#how-to-use) today!
 
 {{ thin_hr }}
 
