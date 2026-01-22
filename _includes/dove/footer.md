@@ -31,7 +31,7 @@
 [ThemeJs](/nova/site/themejs){: target="_themejs" }
 {%- endcapture %}
 
-<nav class="_nav">
+<nav class="_common_nav">
 {{- dove_footer | markdownify -}}
 {{- tj_footer | markdownify -}}
 </nav>
