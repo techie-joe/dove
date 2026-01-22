@@ -81,7 +81,7 @@ article {
   }
 }
 ._theme_switch {
-  a { font-size:1.5em }
+  a { font-size:1.5rem;padding:1rem }
   a,
   a:focus { @extend .inherit_color; }
   a:hover { @extend .text-blue; }
@@ -130,7 +130,6 @@ $dark_pre_bg  : #171717;
 %dark_std_border { border-color:color.invert($grey_border) }
 ._dark {
   body { color:color.invert($text_color);@extend %dark_std_bg; }
-  b,strong { color:color.adjust($dark_text_color, $lightness: 10%) }
   h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#fff }
   .h1,.h2 { @extend %dark_std_border; }
 

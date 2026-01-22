@@ -3,6 +3,7 @@ block append vars
   - path   = 'index.html'
 block append style
   style.
+    ._article ._bimoji { top:6em }
     ._header h1 { padding-top:.3em;margin-top:1rem }
     ._header .desc { padding-bottom:1.3em;margin-top:-0.7em }
     #pages_ ul,
@@ -25,7 +26,7 @@ mixin index_nav(ref)
   +sn(ref+"/samples")| Samples
 block content
   .relative: ._bimoji !{icon}
-  h1 🕊️ The {{ site.title }} Project
+  h1 !{icon} The {{ site.title }} Project
   //- p.desc {{ site.description }}
   .flex(style="gap:3rem")
     .fill#themes_

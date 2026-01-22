@@ -32,9 +32,8 @@ description: Home template in html.
     </script>
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/prime/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
     <style>
-      #hero_block { padding:1rem 2rem }
-      #hero_block h1 { padding-top:0;margin-top:1rem }
-      #hero_block h2 { border:0;font-weight:normal;font-size:1.2em;margin-top:1rem }
+      ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
+      ._article h2.desc { border:0;margin-top:-0.7em }
     </style>
 {% include layout_head.html %}
 <!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
@@ -42,7 +41,7 @@ description: Home template in html.
   <body>
     <div class="_body_layout _layout">
       <main class="_view">
-        <div class="_layout _main_layout container-lg px-3 my-3 markdown-body">
+        <div class="_layout _main_layout container-lg px-3 markdown-body">
           <header class="_header">
             <div class="_layout _header_layout">
               <div class="h1">{% include dove/logo.html name="prime" %}</div>
@@ -60,13 +59,12 @@ description: Home template in html.
           </nav>
           <article class="_article">
             <div class="_layout _article_layout">
-              <div class="box no_overflow" id="hero_block">
-                <div class="relative">
-                  <div class="_bimoji">🦅</div>
-                </div>
-                <h1>🦅 Site title</h1>
-                <h2>Site slogan or description</h2>
+              <div class="relative">
+                <div class="_bimoji">🦅</div>
               </div>
+              <h1 class="hero">Main title</h1>
+              <h2 class="desc">🦅 Slogan and description</h2>
+              <p><strong><a href="./preview">Preview the theme</a></strong> to see how it looks and <strong><a href="./#how-to-use">start using it</a></strong> today!</p>
               <hr class="thin"/>
               <p><code>// home content in html</code></p>
             </div>

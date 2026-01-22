@@ -6,17 +6,22 @@ title: Home
 description: Home template.
 ---
 {%- include ui.html %}
+{%- include dove/icon.html %}
 
 <style>
-  #hero_block { padding:1rem 2rem }
-  #hero_block h1 { padding-top:0;margin-top:1rem }
-  #hero_block h2 { border:0;font-weight:normal;font-size:1.2em;margin-top:1rem }
+  ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
+  ._article h2.desc { border:0;margin-top:-0.7em }
 </style>
-<div id="hero_block" class="box no_overflow">
-  <div class="relative"><div class="_bimoji">🦅</div></div>
-  <h1>🦅 Site title</h1>
-  <h2>Your site's description</h2>
-</div>
+
+<div class="relative"><div class="_bimoji">{{icon}}</div></div>
+
+# Main title
+{: .hero}
+
+## {{icon}} Slogan and description
+{: .desc }
+
+**[Preview the theme](./preview)** to see how it looks and **[start using it](./#how-to-use)** today!
 
 {{ thin_hr }}
 

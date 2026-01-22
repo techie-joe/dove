@@ -19,7 +19,7 @@ $pre_bg  : #f4f4f4;
 %std_margin { margin:1em 0 }
 // ---------------------------------------------------------------
 body { color:$text_color;@extend .scrollable; }
-._body_layout { margin:0 }
+._body_layout { margin:0 auto;@extend .pa0; }
 ._app { overflow:initial;position:initial }
 ._b,b,strong { color:color.adjust($text_color, $lightness: 5%) }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#000 }
@@ -83,11 +83,10 @@ article {
   &:hover { @extend .text-blue; }
 }
 ._theme_switch {
-  a {
-    font-size:1.25em;
-    margin:.1rem; // to align with logo
-    @extend .inherit_color;
-  }
+  a { font-size:1.1rem;padding:1rem }
+  a,
+  a:focus { @extend .inherit_color; }
+  a:hover { @extend .text-blue; }
 }
 .itext { vertical-align:baseline }
 .box {

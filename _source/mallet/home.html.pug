@@ -5,14 +5,15 @@ block append vars
   - description = 'Home template in html.'
 block append style
   style.
-    #hero_block { padding:1rem 2rem }
-    #hero_block h1 { padding-top:0;margin-top:1rem }
-    #hero_block h2 { border:0;font-weight:normal;font-size:1.2em;margin-top:1rem }
+    ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
+    ._article h2.desc { border:0;margin-top:-0.7em }
 block content
-  #hero_block.box.no_overflow
-    .relative: ._bimoji !{icon}
-    h1 !{icon} Site title
-    h2 Site slogan or description
+  .relative: ._bimoji !{icon}
+  - title  = `Main title`
+  - description = `Slogan and description`
+  h1.hero !{title}
+  h2.desc !{icon} !{removeLastDot(description)}
+  p| #[strong #[a(href="./preview") Preview the theme]] to see how it looks and #[strong #[a(href="./#how-to-use") start using it]] today!
 
   +thin_hr
   p: code // home content in html

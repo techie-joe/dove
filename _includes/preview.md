@@ -7,7 +7,7 @@ Hero message and _colored text_{: .n.text-red } to grab attention
 
 ![Featured image](https://techie-joe.github.io/core/images/299-400x300.jpg){: .float-right.ml.mb width=400 height=400 }
 
-Welcome to the demo! This page provide a glimpse of the theme's appearance. The `text-justify` class will neatly align a paragraph. While the `big-first` class will enlarge the first letter. If you want to nudge the first line, use the `indent` class. Indentation gives a sense of order and clarity, making an article easier to read. You may also include [images](#images) and [hyperlinks](#hyperlink) to make things more engaging.
+Welcome to the demo! Let us see how the theme looks in action. When writing an article, use `text-justify` to neatly align a paragraph, and use the `big-first` class to enlarge the first letter. If you want to nudge the first line, use the `indent` class. Indentation gives a sense of order and clarity, making an article easier to read. You may also include [images](#images) and [hyperlinks](#hyperlink) to make things more engaging.
 {: .text-justify.big-first }
 
 **Leave whitespace between paragraphs for clarity.**
@@ -141,18 +141,21 @@ Build [link to another page](#){: onclick="event.preventDefault();" }. But if yo
 [Primary](#){: .button.primary onclick="event.preventDefault();" }{{-}}
 [Secondary](#){: .button.secondary onclick="event.preventDefault();" }{{-}}
 [Default](#){: .button onclick="event.preventDefault();" }{{-}}
-[Slategrey](#){: .button.text-secondary onclick="event.preventDefault();" }{{-}}
-[Grey](#){: .button.text-grey onclick="event.preventDefault();" }{{}}
+[Gray](#){: .button.text-gray onclick="event.preventDefault();" }{{-}}
+[Slategrey](#){: .button.text-slategray onclick="event.preventDefault();" }{{-}}
+[Red](#){: .button.bg-red.border-red.text-white onclick="event.preventDefault();" }{{-}}
+[Green](#){: .button.bg-green.border-green.text-white onclick="event.preventDefault();" }{{-}}
+[Orange](#){: .button.bg-orange.border-orange.text-white onclick="event.preventDefault();" }{{}}
 
 ## Footnote link
 
-Footnote links are references to the note[^1] listed at the bottom of a page.
+Footnote links are those little link that brings you to the note[^1] at the bottom of a page.
 
 Click the link to see an example[^2].
 
-Footnote can be written in multiple lines[^3].
+A footnote can be written in multiple lines[^3].
 
-Normally you would use number as reference, but you can use word[^note] as well.
+Normally we use number as reference, but you can use word[^reference] as well.
 
 ## Images
 
@@ -334,8 +337,9 @@ This block expands like curtains on opening night, then folds back up as if noth
 [^2]: For example: **John Smith**, Modern Web Design _(New York: TechPress, 2023), page 45_.
 
 [^3]:
-    You can also define a footnote multiple lines.
-    Every new line in footnote should be prefixed with 2 space or 4 space indentation.
+    You can also write a footnote in multiple lines.
+    Every new line in a footnote should be prefixed
+    with 2 space or 4 space indentation.
 
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+[^reference]:
+    Named footnotes will still be rendered in numbers, but the text reference allow easier identification.  
