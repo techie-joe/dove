@@ -30,8 +30,8 @@ use_pug: true
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/prime/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
     <style>
       ._article ._bimoji { top:6em }
-      ._header h1 { padding-top:.3em;margin-top:1rem }
-      ._header .desc { padding-bottom:1.3em;margin-top:-0.7em }
+      ._article h1 { line-height:1;padding-top:.3em;margin-top:1rem }
+      ._article .desc { padding-bottom:1.3em;margin-top:-0.7em }
       #pages_ ul,
       #posts_ ul,
       .markdown-body .rapat { margin:1rem 0;padding-left:1.3em }
@@ -104,13 +104,13 @@ use_pug: true
                   <h3 class="mt-0">Posts</h3>{{ posts | markdownify }}
                 </div>
               </div>
-              <hr class="thin"/>{%- if site.github.environment == 'development' -%}{%- capture nav_test %}{%- include dove/nav_test.md %}{%- endcapture %}{{ nav_test | markdownify }}
+              <hr class="thin"/>{%- if site.github.environment == 'development' -%}{%- capture nav_test %}{%- include dove/nav_test.md  %}{%- endcapture %}{{ nav_test | markdownify }}
               <hr class="thin"/>{%- endif %}
-              <h3>Configurations</h3>{%- capture config %}{%- include_relative config.md %}{%- endcapture %}{{ config | markdownify }}
+              <h3>Configurations</h3>{%- capture config %}{%- include_relative config.md  %}{%- endcapture %}{{ config | markdownify }}
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">{%- capture footer %}{%- include footer.md %}{%- endcapture %}{{ footer | markdownify }}
+            <div class="_layout _footer_layout">{%- capture footer %}{%- include footer.md  %}{%- endcapture %}{{ footer | markdownify }}
             </div>
           </footer>
         </div>

@@ -31,10 +31,6 @@ description: Home template in html.
       
     </script>
     <link id="_style" rel="stylesheet" href="{{ site.baseurl }}/assets/core/css/style.css?r={{ site.revision | default: '0' }}.{{ site.github.build_revision | default: '0' }}"/>
-    <style>
-      ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
-      ._article h2.desc { border:0;margin-top:-0.7em }
-    </style>
 {% include layout_head.html %}
 <!--[if lt IE 9]><script src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -58,15 +54,7 @@ description: Home template in html.
             </div>
           </nav>
           <article class="_article">
-            <div class="_layout _article_layout">
-              <div class="relative">
-                <div class="_bimoji">💎</div>
-              </div>
-              <h1 class="hero">Main title</h1>
-              <h2 class="desc">💎 Slogan and description</h2>
-              <p><strong><a href="./preview">Preview the theme</a></strong> to see how it looks and <strong><a href="./#how-to-use">start using it</a></strong> today!</p>
-              <hr class="thin"/>
-              <p><code>// home content in html</code></p>
+            <div class="_layout _article_layout">{%- capture sample %}{%- include dove/sample_home.md name='core' %}{%- endcapture %}{{ sample | markdownify }}
             </div>
           </article>
           <footer class="_footer">

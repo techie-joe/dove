@@ -41,12 +41,12 @@ description: Testing something here.
         <div class="_layout _main_layout container-lg px-3 markdown-body">
           <header class="_header">
             <div class="_layout _header_layout">
-              <div class="h1">{%- capture header %}{%- include header.md %}{%- endcapture %}{{ header }}
+              <div class="h1">{%- capture header %}{%- include header.md  %}{%- endcapture %}{{ header  }}
               </div>
             </div>
           </header>
           <nav class="_nav">
-            <div class="_layout _nav_layout">{%- capture nav %}{%- include nav.md %}{%- endcapture %}{{ nav | markdownify }}
+            <div class="_layout _nav_layout">{%- capture nav %}{%- include nav.md  %}{%- endcapture %}{{ nav | markdownify }}
             </div>
           </nav>
           <article class="_article">
@@ -59,7 +59,7 @@ description: Testing something here.
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">{%- capture footer %}{%- include footer.md %}{%- endcapture %}{{ footer | markdownify }}
+            <div class="_layout _footer_layout">{%- capture footer %}{%- include footer.md  %}{%- endcapture %}{{ footer | markdownify }}
             </div>
           </footer>
         </div>

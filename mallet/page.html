@@ -56,11 +56,11 @@ description: Page template in html.
           <article class="_article">
             <div class="_layout _article_layout">
               <h1>Page title</h1>
-              <p><code>// page content in html</code></p>
+              <p><code>// page sample written in html</code></p>
               <aside>
                 <div class="mt-6"></div>
                 <hr/>
-                <h2>Other pages</h2>{%- capture pages %}{%- include pages.md %}{%- endcapture %}{{ pages | markdownify }}
+                <h2>Other pages</h2>{%- capture pages %}{%- include pages.md  %}{%- endcapture %}{{ pages | markdownify }}
               </aside>
             </div>
           </article>

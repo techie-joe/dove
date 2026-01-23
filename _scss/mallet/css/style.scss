@@ -73,9 +73,10 @@ article {
   ._header .h1 { padding:0;font-size:1.2em !important }
 }
 ._header {
-  .h1 { @extend .mt0;@extend .ba0; } // logo holder
+  .h1 { line-height:1;@extend .mt0;@extend .ba0; } // logo holder
   ._logo a { @extend .no_u;@extend .block;padding:.25rem;margin:-.25rem; }
 }
+._theme_switch a,
 ._common_nav a,
 ._logo a,
 ._nav a {
@@ -83,10 +84,7 @@ article {
   &:hover { @extend .text-blue; }
 }
 ._theme_switch {
-  a { font-size:1.1rem;padding:1rem }
-  a,
-  a:focus { @extend .inherit_color; }
-  a:hover { @extend .text-blue; }
+  a { font-size:1.4rem;padding:.6rem } // to align with _logo
 }
 .itext { vertical-align:baseline }
 .box {

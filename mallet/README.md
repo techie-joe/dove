@@ -10,8 +10,8 @@ remote_theme_version  : {{ site.version }}
 remote_theme_revision : {{ site.revision }}
 ```
 
-<a href="./preview" title="See how the template looks." class="_bt -blue" style="width:10rem;height:3rem;font-size:1.2rem;">Preview</a>
-<a href="./samples" title="See how you can use this template to build your website" class="_bt" style="width:10rem;height:3rem;font-size:1.2rem;font-weight:normal;">Samples</a>
+<a href="./preview" title="See how the template looks." class="_bt -blue" style="width:10rem;height:3rem;font-size:1.2rem;">Preview</a>{{-}}
+<a href="./samples" title="See how you can use this template to build your website." class="_bt" style="width:10rem;height:3rem;font-size:1.2rem;font-weight:normal;">Samples</a>
 
 ## Build faster on GitHub Pages
 

@@ -3,17 +3,6 @@ block append vars
   - path   = 'home.html'
   - title  = `Home`
   - description = 'Home template in html.'
-block append style
-  style.
-    ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
-    ._article h2.desc { border:0;margin-top:-0.7em }
 block content
-  .relative: ._bimoji !{icon}
-  - title  = `Main title`
-  - description = `Slogan and description`
-  h1.hero !{title}
-  h2.desc !{icon} !{removeLastDot(description)}
-  p| #[strong #[a(href="./preview") Preview the theme]] to see how it looks and #[strong #[a(href="./#how-to-use") start using it]] today!
-
-  +thin_hr
-  p: code // home content in html
+  - x = `name='${layout_name}'`
+  +include('sample','dove/sample_home.md',x)
