@@ -81,7 +81,7 @@ article {
   }
 }
 ._theme_switch {
-  a { font-size:1.5rem;padding:.7rem } // to align with _logo
+  a { font-size:1.3rem;padding:.9rem } // to align with _logo
   a,
   a:focus { @extend .inherit_color; }
   a:hover { @extend .text-blue; }
