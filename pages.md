@@ -1,5 +1,6 @@
 ---
 permalink: pages
+index: false
 title: Pages
 description: List of all pages on this site.
 ---

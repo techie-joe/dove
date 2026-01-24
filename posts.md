@@ -1,5 +1,6 @@
 ---
 permalink: posts
+index: false
 title: Posts
 description: List of all posts on this site.
 ---
