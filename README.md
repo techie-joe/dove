@@ -11,7 +11,7 @@ Get a **quick and easy way to build a website**. Build your website on GitHub Pa
 > **Dove handles the necessary foundation so you can focus on your code.**
 
 > [!WARNING]  
-> **Dove is constantly under active development. Do not use it directly. Future update may break your site. Instead, visit individual theme's homepage for a stable release.**
+> **Dove is constantly under active development. Do not use it directly. Beta builds may break your site. Instead, visit individual theme's homepage for a stable release.**
 
 ## How to use
 
