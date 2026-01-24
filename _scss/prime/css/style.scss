@@ -81,7 +81,7 @@ article {
   }
 }
 ._theme_switch {
-  a { font-size:1.3rem;padding:.9rem } // to align with _logo
+  a { font-size:1.3rem;padding:.5rem } // to align with _logo
   a,
   a:focus { @extend .inherit_color; }
   a:hover { @extend .text-blue; }
@@ -154,7 +154,7 @@ $dark_pre_bg  : #171717;
 ._dark {
   .highlight {
     .o,.ow,
-    .k,.kd,.kp { color:#dcb }
+    .k,.kd,.kp,.kr { color:#dcb }
     .m,
     .kc,
     .no,.nv { color:#0bb }
@@ -169,6 +169,6 @@ $dark_pre_bg  : #171717;
     .s,.si,.s1,.s2 { color:#f36; }
     .gd { background-color:rgba($text-red,.25);color:$text-white }
     .gi { background-color:rgba($text-green,.25);color:$text-white }
-    .err { background-color:#fff;color:#d33 }
+    .err { background-color:#300;color:#d33 }
   }
 }

@@ -55,7 +55,14 @@ description: We can't find what you are looking for.
           </nav>
           <article class="_article">
             <div class="_layout _article_layout">
-{%- include dove/404.md title="Oops! Nothing found" %}
+              <div class="flex" style="margin:2rem 0 3rem">
+                <div class="fit" style="font-size:4rem;padding:.8rem;line-height:1">🤷</div>
+                <div class="f" style="padding:0 1rem;">
+                  <h3 style="margin-top:0;padding-top:1rem;">Oops! Nothing found</h3>
+                  <p>We can't find what you are looking for.</p>
+                </div>
+              </div>
+              <hr class="thin"/>{%- capture nav_common %}{%- include dove/sample_nav_common.md sub="prime" %}{%- endcapture %}{{ nav_common | markdownify }}
             </div>
           </article>
           <footer class="_footer">

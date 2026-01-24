@@ -45,10 +45,9 @@ use_pug: true
           </nav>
           <article class="_article">
             <div class="_layout _article_layout">{{ content }}
-              <aside>
-                <div class="mt-6"></div>
+              <aside style="margin-top:3rem">
                 <hr/>
-                <h2>Other pages</h2>{%- capture pages %}{%- include pages.md  %}{%- endcapture %}{{ pages | markdownify }}
+                <h2>Other pages</h2>{%- capture pages %}{%- include dove/sample_page_footer.md  %}{%- endcapture %}{{ pages | markdownify }}
               </aside>
             </div>
           </article>

@@ -3,3 +3,15 @@ block append vars
   - path = 'index.html'
   - title  = `Prime`
   - description = `Prime is a Jekyll theme for GitHub Pages.`
+block header
+  .h1|{% include dove/logo.html %}
+  //- +hide_header
+block nav
+  +hide_nav
+block append style
+  style.
+    ._article h1 { padding-top:.3em;border:0;font-size:3em;font-weight:bold }
+    ._article h2:first-of-type { border:0;padding-bottom:1.3em;margin-top:-0.7em }
+    ._footer { margin-top:3rem }
+block prepend content
+  .relative: ._bimoji !{icon}

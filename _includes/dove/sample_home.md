@@ -14,12 +14,12 @@
 ## {{icon}} Slogan and description
 {: .desc }
 
-Often appearing immediately after is a **[call to action](#CTA){: onclick="event.preventDefault();" }**.
+Immediately after is usually a **[call to action](#CTA){: onclick="{{onclick}}" }**.
 
-<div style="margin-top:3rem"></div>
-<a href="#CTA1" onclick="event.preventDefault();" title="Main call to action." class="button primary" style="width:10rem;height:3rem;font-size:1.2rem;">Get started</a>{{-}}
-<a href="#CTA2" onclick="event.preventDefault();" title="Secondary call to action." class="button secondary" style="width:10rem;height:3rem;font-size:1.2rem;font-weight:normal;">Learn more</a>
+<div style="margin-top:2.5rem"></div>
+<a href="#CTA1" onclick="{{onclick}}" title="Main call to action." class="button primary" style="padding:.5em 1em;font-size:1rem;">Get started</a>{{-}}
+<a href="#CTA2" onclick="{{onclick}}" title="Secondary call to action." class="button secondary" style="padding:.5em 1em;font-size:1rem;font-weight:normal;">Learn more</a>
 
 {{ thin_hr }}
 
-`// home page sample written in html`
+`// home page sample written in markdown`

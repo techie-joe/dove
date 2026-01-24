@@ -134,18 +134,18 @@ end
 
 ## Hyperlink
 
-Build [link to another page](#){: onclick="event.preventDefault();" }. But if you link to a missing page, you'll get [an error](404){: title="The error page"}.
+Build [link to another page](#){: onclick="{{onclick}}" }. But if you link to a missing page, you'll get [an error](404){: title="The error page"}.
 
 ## Button link
 
-[Primary](#){: .button.primary onclick="event.preventDefault();" }{{-}}
-[Secondary](#){: .button.secondary onclick="event.preventDefault();" }{{-}}
-[Default](#){: .button onclick="event.preventDefault();" }{{-}}
-[Gray](#){: .button.text-gray onclick="event.preventDefault();" }{{-}}
-[Slategrey](#){: .button.text-slategray onclick="event.preventDefault();" }{{-}}
-[Red](#){: .button.bg-red.border-red.text-white onclick="event.preventDefault();" }{{-}}
-[Green](#){: .button.bg-green.border-green.text-white onclick="event.preventDefault();" }{{-}}
-[Orange](#){: .button.bg-orange.border-orange.text-white onclick="event.preventDefault();" }{{}}
+[Primary](#){: .button.primary onclick="{{onclick}}" }{{-}}
+[Secondary](#){: .button.secondary onclick="{{onclick}}" }{{-}}
+[Default](#){: .button onclick="{{onclick}}" }{{-}}
+[Gray](#){: .button.text-gray onclick="{{onclick}}" }{{-}}
+[Slategrey](#){: .button.text-slategray onclick="{{onclick}}" }{{-}}
+[Red](#){: .button.bg-red.border-red.text-white onclick="{{onclick}}" }{{-}}
+[Green](#){: .button.bg-green.border-green.text-white onclick="{{onclick}}" }{{-}}
+[Orange](#){: .button.bg-orange.border-orange.text-white onclick="{{onclick}}" }
 
 ## Footnote link
 
