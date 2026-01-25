@@ -91,21 +91,15 @@ use_pug: true
                 </div>
               </div>
               <hr class="thin"/>
-              <p class="text-grey">Development posts and pages.</p>{%- capture pages %}{% include pages.md exclude="" %}{%- endcapture %}{%- capture posts %}{% include posts.md exclude="" %}{%- endcapture %}
+              <p class="text-grey">Development posts and pages.</p>
               <div class="flex" style="gap:1rem;flex-flow:wrap">
                 <div id="pages_" style="min-width:250px">
-                  <h3 class="mt-0">Pages</h3>{{ pages | markdownify }}
-                  <ul>
-                    <li><a href="pages">Pages</a>
-                    </li>
-                    <li><a href="posts">Posts</a>
-                    </li>
-                    <li><a href="404">404</a>
-                    </li>
-                  </ul>
+                  <h3 class="mt-0">Pages</h3>{%- capture pages %}
+{% include pages.md exclude="" %}
+- [404]('404'){%- endcapture %}{{ pages | markdownify }}
                 </div>
                 <div id="posts_" style="min-width:250px">
-                  <h3 class="mt-0">Posts</h3>{{ posts | markdownify }}
+                  <h3 class="mt-0">Posts</h3>{%- capture posts %}{% include posts.md exclude="" %}{%- endcapture %}{{ posts | markdownify }}
                 </div>
               </div>
               <hr class="thin"/>{%- if site.github.environment == 'development' -%}{%- capture nav_test %}{%- include dove/nav_test.md  %}{%- endcapture %}{{ nav_test | markdownify }}

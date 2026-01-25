@@ -10,9 +10,7 @@
 
 {%- capture dove_footer %}
 {{- thin_hr -}}
-{%- unless page.path == 'pages.md' or page.path == 'posts.md' -%}
 {%- include dove/nav.md %}
-{%- endunless %}
 **Dove**
 {{- angle -}}
 [Repository](https://github.com/techie-joe/dove){: target="_dove_repository" }

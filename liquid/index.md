@@ -1,13 +1,10 @@
 ---
-use_footer: edit_link_only
 title: Liquid
-description: Liquid basics.
+description: Liquid syntax on Github Pages.
 ---
 {%- include ui.html %}
 
-# Liquid basics
-
-###### syntax
+# {{ page.description | remove: '.' }}
 
 {% raw %}
 ```liquid

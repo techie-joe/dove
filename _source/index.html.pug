@@ -36,23 +36,21 @@ block content
         li: +index_nav('core')
         li: +index_nav('mallet')
         li: +index_nav('prime')
-        //- li: +index_nav('nova')
   +thin_hr
   p.text-grey Development posts and pages.
-  //- - exclude_pages = [ ].join(",");
-  //- - exclude_posts = [ ].join(",");
-  +capture('pages')|{% include pages.md exclude="!{exclude_pages}" %}
-  +capture('posts')|{% include posts.md exclude="!{exclude_posts}" %}
   .flex(style="gap:1rem;flex-flow:wrap")
     #pages_(style="min-width:250px")
       h3.mt-0 Pages
+        //- - exclude_pages = [ ].join(",");
+      +capture('pages')
+        +l|{% include pages.md exclude="!{exclude_pages}" %}
+        +l|- [404]('404')
       |{{ pages | markdownify }}
-      ul
-        li: +a('pages')| Pages
-        li: +a('posts')| Posts
-        li: +a('404')| 404
     #posts_(style="min-width:250px")
       h3.mt-0 Posts
+      //- - exclude_posts = [ ].join(",");
+      +capture('posts')
+        |{% include posts.md exclude="!{exclude_posts}" %}
       |{{ posts | markdownify }}
   +thin_hr
   +if_dev
