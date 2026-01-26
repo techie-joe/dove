@@ -1,6 +1,7 @@
 ---
 layout: core-post
 index: false
+sample: true
 use_footer: demo_sample
 title: Post
 description: Post template in markdown.

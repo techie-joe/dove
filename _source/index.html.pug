@@ -28,11 +28,12 @@ block content
   .relative: ._bimoji !{icon}
   h1 !{icon} The {{ site.title }} Project
   //- p.desc {{ site.description }}
+  nav._common_nav: +include('nav','dove/nav.md')
   .flex(style="gap:3rem")
     .fill#themes_
       //- h3.mt-0 Themes
       p.text-grey We are working on the following themes.
-      ul.rapat
+      nav: ul.rapat
         li: +index_nav('core')
         li: +index_nav('mallet')
         li: +index_nav('prime')
@@ -44,17 +45,27 @@ block content
         //- - exclude_pages = [ ].join(",");
       +capture('pages')
         +l|{% include pages.md exclude="!{exclude_pages}" %}
-        +l|- [404]('404')
-      |{{ pages | markdownify }}
+      nav|{{ pages | markdownify }}
     #posts_(style="min-width:250px")
       h3.mt-0 Posts
       //- - exclude_posts = [ ].join(",");
       +capture('posts')
-        |{% include posts.md exclude="!{exclude_posts}" %}
-      |{{ posts | markdownify }}
-  +thin_hr
+        +l|{% include posts.md exclude="!{exclude_posts}" %}
+      nav|{{ posts | markdownify }}
   +if_dev
-    +include('nav_test','dove/nav_test.md')
     +thin_hr
+    +capture('nav_test')
+      +l|{% include dove/nav_test.md %}
+      +l|{{- bull -}} [404]('404')
+    |{{ nav_test | markdownify }}
+  +thin_hr
+  +capture('dove_footer')
+    +l|**Dove**
+    +l|{{- angle -}}
+    +l|[Repository](https://github.com/techie-joe/dove){: target="_dove_repository" }
+    +l|{{- bull -}}
+    +l|[Proto](https://techie-joe.github.io/proto){: target="_proto" }
+  |{{ dove_footer | markdownify }}
+  +thin_hr
   h3 Configurations
   +include_relative('config','config.md')

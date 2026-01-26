@@ -3,7 +3,11 @@ block append vars
   - path   = 'post.html'
   - title  = `Post`
   - description = 'Post template in html.'
+block footer
+  +include('post_footer','post_footer.md')  
+  +thin_hr
+  p: code // site footer
+  +_edit_link
 block content
   h1 Post title
   p: code // post sample written in html
-  +post_footer

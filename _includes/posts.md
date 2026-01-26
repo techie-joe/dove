@@ -1,4 +1,5 @@
 {%- include ui.html %}
+{%- assign _limit = include.limit %}
 {%- assign _exclude = include.exclude | default: "" | split: "," %}
 {%- assign n = 0 %}
 {%- if site.posts %}

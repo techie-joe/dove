@@ -1,10 +1,11 @@
 ---
+layout: default-page
 title: Liquid
 description: Liquid syntax on Github Pages.
 ---
 {%- include ui.html %}
 
-# {{ page.description | remove: '.' }}
+# Liquid syntax
 
 {% raw %}
 ```liquid
@@ -58,30 +59,31 @@ else   : {%- assign x = 'otherwise' %}
 {%- assign string = ' jAmEs,  pEtErSoN . ' %}
 
 ```yml
-string        : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
+string     : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
 
 # replace: ',' | remove: '.' | strip
 {%- assign string = string | replace: ',', ' ' | remove: '.' | strip %}
-string        : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
+string     : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
 
 # split: ' ' | join: ' '
 {%- assign string = string | split: ' ' | join: ' ' %}
-string        : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
+string     : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
 
-upcase        : {{ string | upcase | jsonify }}
-downcase      : {{ string | downcase | jsonify }}
-capitalize    : {{ string | capitalize | jsonify }}
+upcase     : {{ string | upcase | jsonify }}
+downcase   : {{ string | downcase | jsonify }}
+capitalize : {{ string | capitalize | jsonify }}
 
 # titleize is not working, you have to use titleized
-titleize      : {{ string | titleize | jsonify }}
-titleized     : {% include titleized.md string=string %}{{ titleized_string | jsonify }}
+titleize   : {{ string | titleize | jsonify }}
+titleized  : {% include titleized.md string=string %}{{ titleized_string | jsonify }}
 
 # downcase | replace: "james", "smith" | prepend: 'Mr. ' | append: ' Jr.'
 {%- assign string = string | downcase | replace: "james", "smith" | prepend: 'mr ' | append: ' jr' %}
 {% include titleized.md string = string %}
 {%- assign string = titleized_string %}
-string        : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
-truncate      : {{ string | truncate: 15 | jsonify }}
+string     : {{ string | jsonify }} [{{ string | size | append: ' characters' }}]
+slice      : {{ string | slice: 0, 15 | jsonify }}
+truncate   : {{ string | truncate: 15 | jsonify }}
 ```
 
 ###### date
@@ -154,14 +156,14 @@ Use `{% else %}` to handle empty arrays.{% endraw %}
 ```
 
 ```yml
-chars    : [{{ chars }}] [{{ chars | size | append: ' items' }}]
-jsonify  : {{ chars | jsonify }}
-join     : {{ chars | join: ',' | jsonify }}
-order    : {{ chars | first }}{{' ... '}}{{ chars | last }}
-loop     : {% for item in chars %}{{ item }}{% unless forloop.last %}{{'-'}}{%- endunless %}{%- endfor %}
-reverse  : {{ chars | reverse | jsonify }}
-sort     : {{ chars | sort | jsonify }}
-slice    : {{ chars | slice: 3, 3 | jsonify }}
+chars   : [{{ chars }}] [{{ chars | size | append: ' items' }}]
+jsonify : {{ chars | jsonify }}
+join    : {{ chars | join: ',' | jsonify }}
+order   : {{ chars | first }}{{' ... '}}{{ chars | last }}
+loop    : {% for item in chars %}{{ item }}{% unless forloop.last %}{{'-'}}{%- endunless %}{%- endfor %}
+reverse : {{ chars | reverse | jsonify }}
+sort    : {{ chars | sort | jsonify }}
+slice   : {{ chars | slice: 3, 3 | jsonify }}
 ```
 
 {%- assign fruits = 'apple,banana,cherry' | split: ',' %}
@@ -171,7 +173,7 @@ slice    : {{ chars | slice: 3, 3 | jsonify }}
 ```
 
 ```yml
-fruits   : {{ fruits | jsonify }} [{{ fruits | size | append: ' items' }}]
+fruits  : {{ fruits | jsonify }} [{{ fruits | size | append: ' items' }}]
 ```
 
 {%- assign fruits = fruits | join: ',' | prepend: 'pear,' | append: ',durian' | split: ',' %}
@@ -181,7 +183,7 @@ fruits   : {{ fruits | jsonify }} [{{ fruits | size | append: ' items' }}]
 ```
 
 ```yml
-fruits   : {{ fruits | jsonify }} [{{ fruits | size | append: ' items' }}]
+fruits  : {{ fruits | jsonify }} [{{ fruits | size | append: ' items' }}]
 ```
 
 ###### capture
@@ -233,3 +235,5 @@ Looks like the following syntax isn't working.
 # Compare an emptiness against the empty keyword.
 {% if emptiness == empty -%} emptiness is empty {%- else -%} empty is not working {%- endif %}
 ```
+
+<div style="margin-top:3rem"></div>

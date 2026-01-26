@@ -1,6 +1,7 @@
 ---
 layout: core
 index: false
+sample: true
 use_footer: demo_sample
 title: Home
 description: Home template in markdown.

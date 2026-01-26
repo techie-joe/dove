@@ -47,14 +47,10 @@ use_pug: true
           </nav>
           <article class="_article">
             <div class="_layout _article_layout">{{ content }}
-              <aside style="margin-top:3rem">
-                <hr/>
-                <h2>Other pages</h2>{%- capture pages %}{%- include dove/sample_page_footer.md  %}{%- endcapture %}{{ pages | markdownify }}
-              </aside>
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">{%- capture footer %}{%- include footer.md  %}{%- endcapture %}{{ footer | markdownify }}
+            <div class="_layout _footer_layout">{%- capture page_footer %}{%- include page_footer.md  %}{%- endcapture %}{{ page_footer | markdownify }}{%- capture footer %}{%- include footer.md  %}{%- endcapture %}{{ footer | markdownify }}
             </div>
           </footer>
         </div>

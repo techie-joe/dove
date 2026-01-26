@@ -147,18 +147,6 @@ mixin site_nav(ref)
   +bull
   +sn(ref+"/404")| 404
 
-mixin page_footer
-  aside(style="margin-top:3rem")
-    hr
-    h2 Other pages
-    +include('pages','dove/sample_page_footer.md')
-
-mixin post_footer
-  aside(style="margin-top:3rem")
-    hr
-    h2 Other posts
-    +include('posts','dove/sample_post_footer.md')
-
 mixin sample_404(_title,_description)
   .flex(style="margin:2rem 0 3rem")
     .fit(style="font-size:4rem;padding:.8rem;line-height:1") 🤷

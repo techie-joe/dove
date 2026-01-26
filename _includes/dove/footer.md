@@ -1,5 +1,8 @@
-{% include ui.html %}
-
+{%- include ui.html %}
+{%- if page.use_footer == false -%}
+<style>._footer{display:none !important}</style>
+{%- else %}
+{%- unless page.use_footer contains 'edit_link_only' -%}
 {%- if page.use_footer contains 'demo_sample' -%}
 
 {{ thin_hr }}
@@ -8,18 +11,11 @@
 
 {%- else %}
 
-{%- capture dove_footer %}
-{{- thin_hr -}}
+{%- capture dove_nav %}
 {%- include dove/nav.md %}
-**Dove**
-{{- angle -}}
-[Repository](https://github.com/techie-joe/dove){: target="_dove_repository" }
-{{- bull -}}
-[Proto](https://techie-joe.github.io/proto){: target="_proto" }
 {%- endcapture %}
 
 {%- capture tj_footer %}
-{{- thin_hr -}}
 **Techie Joe's**
 {{- angle -}}
 [Website](https://techie-joe.github.io){: target="_techiejoe_website" }
@@ -29,9 +25,16 @@
 [ThemeJs](/nova/site/themejs){: target="_themejs" }
 {%- endcapture %}
 
-<nav class="_common_nav">
-{{- dove_footer | markdownify -}}
-{{- tj_footer | markdownify -}}
-</nav>
+{{ thin_hr }}
+<nav class="_common_nav">{{ dove_nav | markdownify }}</nav>
+<nav class="_common_nav">{{ tj_footer | markdownify }}</nav>
+
+{%- endif %}
+{%- endunless %}
+
+{{ thin_hr }}
+
+This site is open source. {% github_edit_link "Improve this page" %}.
+{: .text-right.text-gray.small }
 
 {%- endif %}

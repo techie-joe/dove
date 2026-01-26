@@ -1,5 +1,6 @@
 ---
 permalink: pages
+index: false
 use_footer: edit_link_only
 title: Pages
 description: List of all pages on this site.

@@ -3,4 +3,6 @@ block append vars
   - layout_type = '-post.html.pug'
 block content
   |{{ content }}
-  +post_footer
+block footer
+  +include('post_footer','post_footer.md')
+  +include('footer','footer.md')

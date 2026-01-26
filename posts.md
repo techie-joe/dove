@@ -1,5 +1,6 @@
 ---
 permalink: posts
+index: false
 use_footer: edit_link_only
 title: Posts
 description: List of all posts on this site.

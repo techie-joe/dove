@@ -68,26 +68,30 @@ use_pug: true
                 <div class="_bimoji">🕊️</div>
               </div>
               <h1>🕊️ The {{ site.title }} Project</h1>
+              <nav class="_common_nav">{%- capture nav %}{%- include dove/nav.md  %}{%- endcapture %}{{ nav | markdownify }}
+              </nav>
               <div class="flex" style="gap:3rem">
                 <div class="fill" id="themes_">
                   <p class="text-grey">We are working on the following themes.</p>
-                  <ul class="rapat">
-                    <li><b><a href="{{ site.baseurl }}/core/">Core</a></b><i class="icon"><i class="isvg">
-                          <svg viewBox="0 0 24 24">
-                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                          </svg></i></i><a href="{{ site.baseurl }}/core/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/samples">Samples</a>
-                    </li>
-                    <li><b><a href="{{ site.baseurl }}/mallet/">Mallet</a></b><i class="icon"><i class="isvg">
-                          <svg viewBox="0 0 24 24">
-                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                          </svg></i></i><a href="{{ site.baseurl }}/mallet/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/mallet/samples">Samples</a>
-                    </li>
-                    <li><b><a href="{{ site.baseurl }}/prime/">Prime</a></b><i class="icon"><i class="isvg">
-                          <svg viewBox="0 0 24 24">
-                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                          </svg></i></i><a href="{{ site.baseurl }}/prime/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/samples">Samples</a>
-                    </li>
-                  </ul>
+                  <nav>
+                    <ul class="rapat">
+                      <li><b><a href="{{ site.baseurl }}/core/">Core</a></b><i class="icon"><i class="isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i></i><a href="{{ site.baseurl }}/core/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/samples">Samples</a>
+                      </li>
+                      <li><b><a href="{{ site.baseurl }}/mallet/">Mallet</a></b><i class="icon"><i class="isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i></i><a href="{{ site.baseurl }}/mallet/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/mallet/samples">Samples</a>
+                      </li>
+                      <li><b><a href="{{ site.baseurl }}/prime/">Prime</a></b><i class="icon"><i class="isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i></i><a href="{{ site.baseurl }}/prime/preview">Preview</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/prime/samples">Samples</a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
               <hr class="thin"/>
@@ -95,15 +99,25 @@ use_pug: true
               <div class="flex" style="gap:1rem;flex-flow:wrap">
                 <div id="pages_" style="min-width:250px">
                   <h3 class="mt-0">Pages</h3>{%- capture pages %}
-{% include pages.md exclude="" %}
-- [404]('404'){%- endcapture %}{{ pages | markdownify }}
+{% include pages.md exclude="" %}{%- endcapture %}
+                  <nav>{{ pages | markdownify }}</nav>
                 </div>
                 <div id="posts_" style="min-width:250px">
-                  <h3 class="mt-0">Posts</h3>{%- capture posts %}{% include posts.md exclude="" %}{%- endcapture %}{{ posts | markdownify }}
+                  <h3 class="mt-0">Posts</h3>{%- capture posts %}
+{% include posts.md exclude="" %}{%- endcapture %}
+                  <nav>{{ posts | markdownify }}</nav>
                 </div>
-              </div>
-              <hr class="thin"/>{%- if site.github.environment == 'development' -%}{%- capture nav_test %}{%- include dove/nav_test.md  %}{%- endcapture %}{{ nav_test | markdownify }}
-              <hr class="thin"/>{%- endif %}
+              </div>{%- if site.github.environment == 'development' -%}
+              <hr class="thin"/>{%- capture nav_test %}
+{% include dove/nav_test.md %}
+{{- bull -}} [404]('404'){%- endcapture %}{{ nav_test | markdownify }}{%- endif %}
+              <hr class="thin"/>{%- capture dove_footer %}
+**Dove**
+{{- angle -}}
+[Repository](https://github.com/techie-joe/dove){: target="_dove_repository" }
+{{- bull -}}
+[Proto](https://techie-joe.github.io/proto){: target="_proto" }{%- endcapture %}{{ dove_footer | markdownify }}
+              <hr class="thin"/>
               <h3>Configurations</h3>{%- capture config %}{%- include_relative config.md  %}{%- endcapture %}{{ config | markdownify }}
             </div>
           </article>

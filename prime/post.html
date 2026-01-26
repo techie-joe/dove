@@ -1,5 +1,6 @@
 ---
 index: false
+sample: true
 layout: raw
 use_pug: true
 title: Post
@@ -57,14 +58,10 @@ description: Post template in html.
             <div class="_layout _article_layout">
               <h1>Post title</h1>
               <p><code>// post sample written in html</code></p>
-              <aside style="margin-top:3rem">
-                <hr/>
-                <h2>Other posts</h2>{%- capture posts %}{%- include dove/sample_post_footer.md  %}{%- endcapture %}{{ posts | markdownify }}
-              </aside>
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">
+            <div class="_layout _footer_layout">{%- capture post_footer %}{%- include post_footer.md  %}{%- endcapture %}{{ post_footer | markdownify }}
               <hr class="thin"/>
               <p><code>// site footer</code></p>
               <hr class="thin"/>
