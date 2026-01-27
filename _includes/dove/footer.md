@@ -3,7 +3,7 @@
 <style>._footer{display:none !important}</style>
 {%- else %}
 {%- unless page.use_footer contains 'edit_link_only' -%}
-{%- if page.use_footer contains 'demo_sample' -%}
+{%- if page.sample -%}
 
 {{ thin_hr }}
 

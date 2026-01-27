@@ -18,7 +18,7 @@ $pre_bg  : #f4f4f4;
 %std_border { border-color:$grey_border }
 %std_margin { margin:1em 0 }
 // ---------------------------------------------------------------
-body { color:$text_color;@extend .scrollable; }
+body { color:$text_color;@extend .scrollable;@extend .scroll_y; }
 ._body_layout { margin:0 auto;@extend .pa0; }
 ._app { overflow:initial;position:initial }
 ._b,b,strong { color:color.adjust($text_color, $lightness: 5%) }

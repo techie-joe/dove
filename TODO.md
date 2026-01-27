@@ -7,8 +7,6 @@ description: List of things to do.
 
 # {{ page.title | remove: '.' }}
 
-- `find out about use_footer: demo_sample`
-- `try replace it with sample`
 - `try proto`{: .text-yellow }
 {: .mono.smaller }
 

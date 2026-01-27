@@ -2,7 +2,6 @@
 layout: prime-page
 index: false
 sample: true
-use_footer: demo_sample
 title: Page
 description: Page template in markdown.
 ---
