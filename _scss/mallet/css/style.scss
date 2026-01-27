@@ -19,7 +19,7 @@ $pre_bg  : #f4f4f4;
 %std_margin { margin:1em 0 }
 // ---------------------------------------------------------------
 body { color:$text_color;@extend .scrollable;@extend .scroll_y; }
-._body_layout { margin:0 auto;@extend .pa0; }
+._body_layout { margin:0 auto;@extend .pa0;@extend .__fadein; }
 ._app { overflow:initial;position:initial }
 ._b,b,strong { color:color.adjust($text_color, $lightness: 5%) }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.hero { color:#000 }
