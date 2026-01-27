@@ -61,7 +61,7 @@ description: Post template in html.
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">
+            <div class="_layout _footer_layout">{%- capture post_footer %}{%- include post_footer.md  %}{%- endcapture %}{{ post_footer | markdownify }}
               <hr class="thin"/>
               <p><code>// site footer</code></p>
               <hr class="thin"/>

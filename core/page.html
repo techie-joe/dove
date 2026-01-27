@@ -61,7 +61,7 @@ description: Page template in html.
             </div>
           </article>
           <footer class="_footer">
-            <div class="_layout _footer_layout">
+            <div class="_layout _footer_layout">{%- capture page_footer %}{%- include page_footer.md  %}{%- endcapture %}{{ page_footer | markdownify }}
               <hr class="thin"/>
               <p><code>// site footer</code></p>
               <hr class="thin"/>
