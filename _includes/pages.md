@@ -2,8 +2,8 @@
 {%- assign _limit = include.limit %}
 {%- assign _exclude = include.exclude | default: "index.html" | split: "," %}
 {%- assign n = 0 %}
-{%- if site.pages %}
-  {%- assign sorted_pages = site.pages | sort: "path" %}
+{%- if site.html_pages %}
+  {%- assign sorted_pages = site.html_pages | sort: "path" %}
   {%- for p in sorted_pages %}
     {%- unless _exclude contains p.path %}
     {%- if p.index != false and p.title.size %}

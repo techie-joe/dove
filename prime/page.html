@@ -58,6 +58,7 @@ description: Page template in html.
             <div class="_layout _article_layout">
               <h1>Page title</h1>
               <p><code>// page sample written in html</code></p>
+              <hr class="thin"/>{%- capture vars_page %}{%- include vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
             </div>
           </article>
           <footer class="_footer">

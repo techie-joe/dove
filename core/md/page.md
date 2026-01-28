@@ -10,3 +10,7 @@ description: Page template in markdown.
 # {{ page.title }} title
 
 `// page sample written in markdown`
+
+{{ thin_hr }}
+
+{% include vars_page.md %}

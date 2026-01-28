@@ -10,3 +10,7 @@ description: Post template in markdown.
 # {{ page.title }} title
 
 `// post sample written in markdown`
+
+{{ thin_hr }}
+
+{% include vars_page.md %}

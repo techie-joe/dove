@@ -9,12 +9,12 @@
 ```yml
 {%
   include inspect.md
-  val=site.github
-  include="project_title,project_tagline,repository_name,repository_nwo,repository_url,url,baseurl,language,archived,disabled,private,show_downloads,is_project_page,is_user_page,hostname,environment,pages_env,pages_hostname,build_revision,api_url,help_url,clone_url,issues_url,releases_url,tar_url,zip_url,wiki_url,owner_display_name,owner_name,owner_url,owner_gravatar_url,source,license,owner,latest_release,releases,contributors"
-  blok="license,owner,versions"
-  bloi="public_repositories,contributors"
-  peek=""
-  pad="                    "
+  val = site.github
+  include = "project_title,project_tagline,repository_name,repository_nwo,repository_url,url,baseurl,language,archived,disabled,private,show_downloads,is_project_page,is_user_page,hostname,environment,pages_env,pages_hostname,build_revision,api_url,help_url,clone_url,issues_url,releases_url,tar_url,zip_url,wiki_url,owner_display_name,owner_name,owner_url,owner_gravatar_url,source,license,owner,latest_release,releases,contributors"
+  blok = "license,owner,versions"
+  bloi = "public_repositories,contributors"
+  peek = ""
+  pad = "                    "
 %}
 ```
 {: .no_max_height }
@@ -24,8 +24,8 @@
 ```yml
 {%
   include inspect.md
-  val=site.github.license
-  pad=pad
+  val = site.github.license
+  pad = pad
 %}
 ```
 {: .no_max_height }
@@ -35,9 +35,9 @@
 ```yml
 {%
   include inspect.md
-  val=site.github.owner
-  include=owner_keys
-  pad=pad
+  val = site.github.owner
+  include = owner_keys
+  pad = pad
 %}
 ```
 {: .no_max_height }
@@ -55,8 +55,8 @@
     {{-nl-}}
     {%-
       include inspect.md
-      val=release
-      pad=pad
+      val = release
+      pad = pad
     %}
   {%- endif %}
   {%- else -%} {{-nl-}} # no release found
@@ -76,10 +76,10 @@
     {{-nl-}}
     {%-
       include inspect.md
-      val=user
-      include="type,login,id,node_id,html_url"
-      pad="                   "
-      tab="  "
+      val = user
+      include = "type,login,id,node_id,html_url"
+      pad = "                   "
+      tab = "  "
     %}
   {%- endfor %}
   {%- else -%} {{-nl-}} # no contributor found

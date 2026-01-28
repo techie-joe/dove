@@ -2,11 +2,11 @@
 layout: vars
 index: false
 use_footer: edit_link_only
-title: Page
-description: Page values on this site.
+title: Pages
+description: Pages on this site.
 ---
 <style>article pre.highlight { max-height:50vh }</style>
 
-{% include vars_page.md %}
+{% include vars_site.pages.md %}
 
 {% comment %} --- end of page --- {% endcomment %}

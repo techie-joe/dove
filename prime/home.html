@@ -70,6 +70,7 @@ description: Home template in html.
               <div style="margin-top:2.5rem"></div><a class="button primary" href="#CTA1" onclick="event.preventDefault();" title="Main call to action." style="padding:.5em 1em;font-size:1rem;">Get started</a><a class="button secondary" href="#CTA2" onclick="event.preventDefault();" title="Secondary call to action." style="padding:.5em 1em;font-size:1rem;font-weight:normal;">Learn more</a>
               <hr class="thin"/>
               <p><code>// home page sample written in html</code></p>
+              <hr class="thin"/>{%- capture vars_page %}{%- include vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
             </div>
           </article>
           <footer class="_footer">

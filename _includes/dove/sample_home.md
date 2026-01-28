@@ -23,3 +23,7 @@ Immediately after is usually a **[call to action](#CTA){: onclick="{{onclick}}" 
 {{ thin_hr }}
 
 `// home page sample written in markdown`
+
+{{ thin_hr }}
+
+{% include vars_page.md %}
