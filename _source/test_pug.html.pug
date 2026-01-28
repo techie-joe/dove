@@ -11,11 +11,11 @@ block prepend front_matter
 block content
   if !testing
     .
-      {%-
+      {%- capture _page %}{%-
         include 404.md
         title = "Sorry"
         description = "There is nothing to show here."
-      %}
+      %}{%- endcapture %}{{ _page | markdownify }}
   else
     pre.highlight: code.
       // testing ..

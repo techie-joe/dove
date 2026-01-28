@@ -2,7 +2,7 @@
 index: false
 use_footer: edit_link_only
 title: Page
-description: Page Variables on this site.
+description: Page variables on this site.
 ---
 <style>article pre.highlight { max-height:50vh }</style>
 

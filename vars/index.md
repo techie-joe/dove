@@ -16,28 +16,28 @@ description: Variables on this site.
 {: .box.highlight.pa.smaller.mono }
 
 ```yml
-# content : [blob - content of the current page]
+content: [blob] # content of the current page {{''}}
 {%- include peek.md val=content word="[0] byte,[1] byte,[n] bytes" %}
 
-# highlighter_prefix : {{ highlighter_prefix | jsonify }}
-# highlighter_suffix : {{ highlighter_suffix | jsonify }}
+highlighter_prefix : {{ highlighter_prefix | jsonify }}
+highlighter_suffix : {{ highlighter_suffix | jsonify }}
 
-# jekyll : [{{ jekyll }}]
+jekyll: [{{ jekyll }}] {{''}}
 {%- include peek.md val=jekyll %}
 
-# layout{{ ' : ' }}
+layout: {{''}}
 {%- include peek.md val=layout %}
 
-# page : [json]
-{%- include peek.md val=page word="[0] page,[1] page,[n] pages" %}
+page: [json] {{''}}
+{%- include peek.md val=page %}
 
-# paginator{{ ' : ' }}
+paginator: {{''}}
 {%- include peek.md val=paginator %}
 
-# site : [{{ site }}]
+site: [{{ site }}] {{''}}
 {%- include peek.md val=site %}
 
-# theme{{ ' : ' }}
+theme: {{''}}
 {%- include peek.md val=theme %}
 ```
 {: .no_max_height }

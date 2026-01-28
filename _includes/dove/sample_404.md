@@ -7,4 +7,4 @@
   </div>
 </div>
 {{ thin_hr }}
-{% include dove/sample_nav_common.md %}
+{% include dove/sample_common_nav.md %}

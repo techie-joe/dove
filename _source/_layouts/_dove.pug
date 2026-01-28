@@ -19,13 +19,13 @@ mixin capture(id='')
   block
   !=`{%- endcapture %}`
 
-mixin include(id='',path='',args="",filter="| markdownify")
-  +capture(id)!=`{%- include ${path} ${args} %}`
-  !=`{{ ${id} ${filter} }}`
+mixin include(id='',path='',args='',filters='| markdownify')
+  +capture(id)!=`{%- include ${[path,args].join(' ')} %}`
+  !=`{{ ${[id,filters].join(' ')} }}`
 
-mixin include_relative(id='',path='',args="",filter="| markdownify")
-  +capture(id)!=`{%- include_relative ${path} ${args} %}`
-  !=`{{ ${id} ${filter} }}`
+mixin include_relative(id='',path='',args='',filters='| markdownify')
+  +capture(id)!=`{%- include_relative ${[path,args].join(' ')} %}`
+  !=`{{ ${[id,filters].join(' ')} }}`
 
 mixin if_env(environment)
   !=`{%- if site.github.environment == '${environment}' -%}`
@@ -155,7 +155,7 @@ mixin sample_404(_title,_description)
       p !{ _description || description }
   +thin_hr
   - x = `sub="${layout_name}"`
-  +include('nav_common','dove/sample_nav_common.md',x)
+  +include('common_nav','dove/sample_common_nav.md',x)
 
 mixin sample_home
   style.

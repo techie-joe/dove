@@ -109,7 +109,7 @@ use_pug: true
                 </div>
               </div>{%- if site.github.environment == 'development' -%}
               <hr class="thin"/>{%- capture nav_test %}
-{% include dove/nav_test.md %}
+{% include dove/test_nav.md %}
 {{- bull -}} [404]('404'){%- endcapture %}{{ nav_test | markdownify }}{%- endif %}
               <hr class="thin"/>{%- capture dove_footer %}
 **Dove**
@@ -118,7 +118,7 @@ use_pug: true
 {{- bull -}}
 [Proto](https://techie-joe.github.io/proto){: target="_proto" }{%- endcapture %}{{ dove_footer | markdownify }}
               <hr class="thin"/>
-              <h3>Configurations</h3>{%- capture config %}{%- include_relative config.md  %}{%- endcapture %}{{ config | markdownify }}
+              <h3>Configurations</h3>{%- capture config %}{%- include dove/config.md  %}{%- endcapture %}{{ config | markdownify }}
             </div>
           </article>
           <footer class="_footer">

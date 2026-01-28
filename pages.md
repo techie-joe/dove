@@ -15,4 +15,4 @@ description: List of all pages on this site.
 ---
 {: .thin style="margin-top:3rem" }
 
-{% include nav_common.md %}
+{% include common_nav.md %}

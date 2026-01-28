@@ -51,11 +51,11 @@ description: Testing something here.
           </nav>
           <article class="_article">
             <div class="_layout _article_layout">
-              {%-
+              {%- capture _page %}{%-
                 include 404.md
                 title = "Sorry"
                 description = "There is nothing to show here."
-              %}
+              %}{%- endcapture %}{{ _page | markdownify }}
             </div>
           </article>
           <footer class="_footer">

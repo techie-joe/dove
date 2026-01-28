@@ -5,14 +5,12 @@ block vars
 block update_vars
 block front_matters
   +front_matter: block front_matter
-    +l
-    .
-      layout: raw
-      use_pug: true
+    +l| layout: raw
+    +l| use_pug: true
     if title
-      +l|title: !{title}
+      +l| title: !{title}
     if description
-      +l|description: !{description}
+      +l| description: !{description}
     //- 
 
 mixin main_style

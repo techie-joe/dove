@@ -4,7 +4,8 @@ description  : {{ site.description | default: "[nil]" }}
 author       : {{ site.author | default: "[nil]" }}
 
 version      : {{ site.version | default: "[nil]" }}
-revision     : {{ site.revision | default: "[nil]" }}{{'.'}}{{ site.github.build_revision | default: "[nil]" }}
+revision     : {{ site.revision | default: "[nil]" }}
+{{-'.'}}{{ site.github.build_revision | default: "[nil]" }}
 
 baseurl      : {{ site.baseurl | default: "[nil]" }}
 home_url     : {{ site.home_url | default: "[nil]" }}
@@ -16,5 +17,3 @@ ghost                : {{ site.ghost | default: "[nil]" }}
 google_analytics     : {{ site.google_analytics | default: "[nil]" }}
 cloudflare_analytics : {{ site.cloudflare_analytics | default: "[nil]" }}
 ```
-{: #config_yml }
-<style>article #config_yml pre.highlight {  }</style>

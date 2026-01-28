@@ -2,7 +2,7 @@
 index: false
 use_footer: edit_link_only
 title: Site
-description: Site Variables on this site.
+description: Site variables on this site.
 ---
 <style>article pre.highlight { max-height:50vh }</style>
 

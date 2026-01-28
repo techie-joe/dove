@@ -33,5 +33,4 @@
 {{ thin_hr }}
 
 {% comment %}
-**[{{ _sub | capitalize }}]({{ site.baseurl }}/{{ _sub }})**
 {% endcomment %}

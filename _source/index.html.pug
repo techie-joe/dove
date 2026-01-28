@@ -55,7 +55,7 @@ block content
   +if_dev
     +thin_hr
     +capture('nav_test')
-      +l|{% include dove/nav_test.md %}
+      +l|{% include dove/test_nav.md %}
       +l|{{- bull -}} [404]('404')
     |{{ nav_test | markdownify }}
   +thin_hr
@@ -68,4 +68,4 @@ block content
   |{{ dove_footer | markdownify }}
   +thin_hr
   h3 Configurations
-  +include_relative('config','config.md')
+  +include('config','dove/config.md')
