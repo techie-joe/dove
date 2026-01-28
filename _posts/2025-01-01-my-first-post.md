@@ -2,6 +2,7 @@
 layout: default-post
 author: John Doe
 comments: false
+tags: giberish
 ---
 # {{ page.title }}
 

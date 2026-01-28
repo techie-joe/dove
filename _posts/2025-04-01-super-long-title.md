@@ -3,6 +3,7 @@ layout: default-post
 title: "Very long title deserve ..."
 full-title: "Very long title deserve a check to see if things will break well - this should be long enough to see how it goes"
 categories: misc
+tags: giberish
 ---
 # {{ page.full-title }}
 

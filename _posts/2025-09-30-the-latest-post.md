@@ -2,6 +2,7 @@
 layout: default-post
 author: Techie Joe
 comments: false
+tags: giberish
 ---
 <style>
   @media only screen and (min-width: 426px) {

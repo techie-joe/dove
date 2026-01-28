@@ -69,7 +69,7 @@
     {%- assign _posts = tag[1] %}
     {{-nl-}} # tag.{{ forloop.index | append: ' - ' }}
     {{- key | append: ' - ' }}
-    {%- include plural.md word=word_key val=_posts %}
+    {%- include plural.md val=_posts word="[0] post,[1] post,[n] posts" %}
     {%- assign sorted_posts = _posts | sort: "id" %}
     {%- for post in sorted_posts %}
       {{-nl-}} # post.{{ forloop.index | append: ' - ' }}

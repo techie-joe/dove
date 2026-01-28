@@ -1,6 +1,7 @@
 ---
 layout: default-post
 categories: misc
+tags: giberish
 ---
 # {{ page.title }}
 
