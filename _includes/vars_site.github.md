@@ -50,7 +50,7 @@
   {%- assign sorted_releases = site.github.releases | sort %}
   {%- if sorted_releases.size > 0 %}
     {%- assign release = sorted_releases[0] -%}
-    {{-nl-}} # release.{{ forloop.index | append: ' - ' -}}
+    {{-nl-}}{{-'# release'-}}[{{ forloop.index }}]{{' : '-}}
     {%- include plural.md val=release word=word_key %}
     {{-nl-}}
     {%-
@@ -67,11 +67,11 @@
 ###### site.github.contributors
 
 ```yml
-# {% include plural.md val=site.github.contributors word="[0] contributor,[1] contributor,[n] contributors" %}
+{{'# '}}{% include plural.md val=site.github.contributors word="[0] contributor,[1] contributor,[n] contributors" %}
 {%- if site.github.contributors %}
   {%- assign sorted_contributors = site.github.contributors | sort: "login" %}
   {%- for user in sorted_contributors %}
-    {{-nl-}} # contributor.{{ forloop.index | append: ' - ' }}
+    {{-nl-}}{{-'# contributor'-}}[{{ forloop.index }}]{{' : '-}}
     {%- include plural.md val=user word=word_key %}
     {{-nl-}}
     {%-
@@ -89,7 +89,7 @@
 ###### site.github.versions
 
 ```yml
-# {% include plural.md word=word_key val=site.github.versions %}
+{{'# '}}{% include plural.md word=word_key val=site.github.versions %}
 {%- if site.github.versions %}
   {%- assign sorted_versions = site.github.versions | sort %}
   {%- for v in sorted_versions %}

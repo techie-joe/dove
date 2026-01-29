@@ -1,15 +1,16 @@
 {%- assign nl="
 " %}
 {%- assign pad = "                 " %}
+{%- assign _repo = include.repo | default: site.github.repository_nwo %}
 
-###### site.github.public_repositories | where: this-repo
+###### site.github.public_repositories | where: full_name, {{ _repo }}
 
 ```yml
 {%- if site.github.public_repositories %}
-  {%- assign sorted_repositories = site.github.public_repositories | where: "full_name",site.github.repository_nwo %}
-  {{-nl-}} # {% include plural.md val=sorted_repositories word="[0] repository,[1] repository,[n] repositories" %}
+  {%- assign sorted_repositories = site.github.public_repositories | where: "full_name",_repo %}
+  {{-nl-}}{{'# '}}{% include plural.md val=sorted_repositories word="[0] repository,[1] repository,[n] repositories" %}
   {%- for repo in sorted_repositories %}
-    {{-nl-}} # repo.{{ forloop.index | append: ' ' }}
+    {{-nl-}}{{-'# repository'-}}[{{ forloop.index }}]{{' : '-}}
     {{-nl-}}
     {%-
       include inspect.md

@@ -1,5 +1,8 @@
 ###### page
 
+Page holds data specific to the current file being rendered.
+{: .small }
+
 ```yml
 {%
   include inspect.md

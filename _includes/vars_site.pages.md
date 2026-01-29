@@ -5,12 +5,15 @@
 
 ###### site.pages
 
+Pages holds **all standalone pages**{: .text-purple } on this website.
+{: .small }
+
 ```yml
-# {% include plural.md word="[0] page,[1] page,[n] pages" val=site.pages %}
+{{'# '}}{% include plural.md word="[0] page,[1] page,[n] pages" val=site.pages %}
 {%- if site.pages %}
   {%- assign sorted_pages = site.pages | sort: "path" %}
   {%- for page in sorted_pages %}
-    {{-nl-}} # page.{{ forloop.index | append: ' - ' }}
+    {{-nl-}}{{-'# page'-}}[{{ forloop.index }}]{{' : '-}}
     {%- include plural.md val=page word=word_key %}
     {{-nl-}}
     {%-

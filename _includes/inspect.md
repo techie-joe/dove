@@ -12,15 +12,15 @@
 
 {%- assign _include = include.include | default: "" | split: "," %}
 {%- assign _exclude = include.exclude | default: "" | split: "," %}
-{%- assign _blok = include.blok | split: "," %}
 {%- assign _bloi = include.bloi | split: "," %}
+{%- assign _blok = include.blok | split: "," %}
 {%- assign _bloc = include.bloc | split: "," %}
 {%- assign _blob = include.blob | split: "," %}
 {%- assign _json = include.json | split: "," %}
 {%- assign _ref  = include.ref_id | split: "," %}
 
-{%- assign _blok = _blok | push: "keys" %}
 {%- assign _bloi = _bloi | push: "size" %}
+{%- assign _blok = _blok | push: "keys" %}
 {%- assign _blob = _blob | push: "content,excerpt,output" | join:"," | split:"," %}
 {%- assign _json = _json | push: "excerpt_separator" %}
 {%- assign _ref  = _ref  | push: "previous,next,owner" | join:"," | split:"," %}
@@ -52,8 +52,8 @@
 {%- elsif _val == nil   -%} {{ '[nil]' }}
 {%- elsif _val == blank -%} {{ '[blank]' }}
 {%- elsif _val == empty -%} {{ '[empty]' | append: _val }}
-{%- elsif _blok contains key -%} [{%- include plural.md val=_val word=word_key %}]
 {%- elsif _bloi contains key -%} [{%- include plural.md val=_val %}]
+{%- elsif _blok contains key -%} [{%- include plural.md val=_val word=word_key %}]
 {%- elsif _bloc contains key -%} [{%- include plural.md val=_val.keys word=word_key %}]
 {%- elsif _blob contains key -%} [{%- include plural.md val=_val word=word_character %}]
 {%- elsif _ref contains key -%} [{{ _val.id }}]

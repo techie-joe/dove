@@ -6,12 +6,15 @@
 
 ###### site.posts
 
+Posts holds **all blog entries**{: .text-purple } in the `_posts` directory.
+{: .small }
+
 ```yml
-# {% include plural.md word="[0] post,[1] post,[n] posts" val=site.posts %}
+{{'# '}}{% include plural.md word="[0] post,[1] post,[n] posts" val=site.posts %}
 {%- if site.posts %}
   {%- assign sorted_posts = site.posts | sort: "id" %}
   {%- for post in sorted_posts %}
-    {{-nl-}} # post.{{ forloop.index | append: ' - ' }}
+    {{-nl-}}{{-'# post'-}}[{{ forloop.index }}]{{' : '-}}
     {%- include plural.md val=post.keys word=word_key %}
     {{-nl-}}
     {%-

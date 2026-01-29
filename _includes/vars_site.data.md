@@ -5,13 +5,15 @@
 
 ###### site.data
 
+Data stores custom structured informations, separated from the rest of your content.
+{: .small }
+
 ```yml
-# {% include plural.md word="[0] file,[1] file,[n] files" val=site.data %}
+{{'# '}}{% include plural.md word="[0] file,[1] file,[n] files" val=site.data %}
 {%- for file in site.data %}
   {%- assign _key = file[0] %}
   {%- assign _d = file[1] %}
-  {{-nl-}} # file.{{ forloop.index | append: ' - ' }}
-  {{- _key | append: ' - ' }}
+  {{-nl-}}{{-'# file'-}}[{{ forloop.index }}]{{' - '}}{{ _key }}{{' : '-}}
   {%- include plural.md val=_d word=word_key %}
   {{-nl-}}
   {%-

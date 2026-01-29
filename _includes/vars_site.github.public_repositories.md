@@ -5,11 +5,11 @@
 ###### site.github.public_repositories
 
 ```yml
-# {% include plural.md val=site.github.public_repositories word="[0] repository,[1] repository,[n] repositories" %}
+{{'# '}}{% include plural.md val=site.github.public_repositories word="[0] repository,[1] repository,[n] repositories" %}
 {%- if site.github.public_repositories %}
   {%- assign sorted_repositories = site.github.public_repositories | sort: "updated_at" | reverse %}
   {%- for repo in sorted_repositories %}
-    {{-nl-}} # repo.{{ forloop.index | append: ' ' }}
+    {{-nl-}}{{-'# repository'-}}[{{ forloop.index }}]{{' : '-}}
     {{-nl-}}
     {%-
       include inspect.md
