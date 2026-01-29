@@ -13,4 +13,4 @@ description: Post template in markdown.
 
 {{ thin_hr }}
 
-{% include vars_page.md %}
+{% include dove/vars_page.md %}

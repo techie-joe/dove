@@ -2,7 +2,7 @@
 {%- if page.use_footer == false -%}
 <style>._footer{display:none !important}</style>
 {%- else %}
-{%- unless page.use_footer contains 'edit_link_only' -%}
+{%- unless page.use_footer contains 'edit_link_only' or page.dir == '/vars/' -%}
 {%- if page.sample -%}
 
 {{ thin_hr }}
@@ -11,9 +11,12 @@
 
 {%- else %}
 
-{%- capture dove_nav %}
-{%- include dove/nav.md %}
-{%- endcapture %}
+{{ thin_hr }}
+
+{%- unless page.path == 'posts.md' or page.path == 'pages.md' %}
+{%- capture dove_nav %}{%- include dove/nav.md %}{%- endcapture %}
+<nav class="_common_nav">{{ dove_nav | markdownify }}</nav>
+{%- endunless %}
 
 {%- capture tj_footer %}
 **Techie Joe's**
@@ -22,11 +25,8 @@
 {{- bull -}}
 [Profile](https://github.com/techie-joe){: target="_techiejoe_profile" }
 {{- bull -}}
-[ThemeJs](/nova/site/themejs){: target="_themejs" }
+[ThemeJs](https://techie-joe.github.io/nova/site/themejs){: target="_themejs" }
 {%- endcapture %}
-
-{{ thin_hr }}
-<nav class="_common_nav">{{ dove_nav | markdownify }}</nav>
 <nav class="_common_nav">{{ tj_footer | markdownify }}</nav>
 
 {%- endif %}

@@ -59,10 +59,9 @@ description: Home template in html.
               <style>
                 ._article h1.hero { border:0;padding-bottom:0;margin-bottom:1rem }
                 ._article h2.desc { border:0;margin-top:-0.7em }
-                
               </style>
               <div class="relative">
-                <div class="_bimoji">⚒️</div>
+                <div class="_bimoji">⚒️  </div>
               </div>
               <h1 class="hero">Main title</h1>
               <h2 class="desc">⚒️ Slogan and description</h2>
@@ -70,7 +69,7 @@ description: Home template in html.
               <div style="margin-top:2.5rem"></div><a class="button primary" href="#CTA1" onclick="event.preventDefault();" title="Main call to action." style="padding:.5em 1em;font-size:1rem;">Get started</a><a class="button secondary" href="#CTA2" onclick="event.preventDefault();" title="Secondary call to action." style="padding:.5em 1em;font-size:1rem;font-weight:normal;">Learn more</a>
               <hr class="thin"/>
               <p><code>// home page sample written in html</code></p>
-              <hr class="thin"/>{%- capture vars_page %}{%- include vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
+              <hr class="thin"/>{%- capture vars_page %}{%- include dove/vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
             </div>
           </article>
           <footer class="_footer">

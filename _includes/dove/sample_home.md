@@ -26,4 +26,4 @@ Immediately after is usually a **[call to action](#CTA){: onclick="{{onclick}}" 
 
 {{ thin_hr }}
 
-{% include vars_page.md %}
+{% include dove/vars_page.md %}

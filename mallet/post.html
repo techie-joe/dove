@@ -58,7 +58,7 @@ description: Post template in html.
             <div class="_layout _article_layout">
               <h1>Post title</h1>
               <p><code>// post sample written in html</code></p>
-              <hr class="thin"/>{%- capture vars_page %}{%- include vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
+              <hr class="thin"/>{%- capture vars_page %}{%- include dove/vars_page.md  %}{%- endcapture %}{{ vars_page | markdownify }}
             </div>
           </article>
           <footer class="_footer">

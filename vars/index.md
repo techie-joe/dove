@@ -1,6 +1,5 @@
 ---
 layout: vars
-use_footer: edit_link_only
 title: Variables
 description: Variables on this site.
 ---
