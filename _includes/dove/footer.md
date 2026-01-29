@@ -9,6 +9,14 @@
 
 `// site footer`
 
+{%- assign _sub = page.layout | remove: '-page'| remove: '-post' %}
+{%- case _sub %}
+{%- when 'core' or 'mallet' or 'prime' %}
+{{ thin_hr }}
+{%- capture sample_nav %}{%- include dove/sample_nav.md sub=_sub %}{%- endcapture %}
+<nav class="_common_nav">{{ sample_nav | markdownify }}</nav>
+{%- endcase %}
+
 {%- else %}
 
 {{ thin_hr }}
@@ -18,16 +26,8 @@
 <nav class="_common_nav">{{ dove_nav | markdownify }}</nav>
 {%- endunless %}
 
-{%- capture tj_footer %}
-**Techie Joe's**
-{{- angle -}}
-[Website](https://techie-joe.github.io){: target="_techiejoe_website" }
-{{- bull -}}
-[Profile](https://github.com/techie-joe){: target="_techiejoe_profile" }
-{{- bull -}}
-[ThemeJs](https://techie-joe.github.io/nova/site/themejs){: target="_themejs" }
-{%- endcapture %}
-<nav class="_common_nav">{{ tj_footer | markdownify }}</nav>
+{%- capture tj_nav %}{%- include dove/tj_nav.md %}{%- endcapture %}
+<nav class="_common_nav">{{ tj_nav | markdownify }}</nav>
 
 {%- endif %}
 {%- endunless %}

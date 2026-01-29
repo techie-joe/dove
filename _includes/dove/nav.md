@@ -3,6 +3,7 @@
 {%- case _sub %}
 {%- when 'core' or 'mallet' or 'prime' %}
 {%- include dove/sample_nav.md sub=_sub %}
+{{ thin_hr }}
 {%- else %}
 {%- if page.use_nav == false -%}
 <style>._nav{display:none !important}</style>

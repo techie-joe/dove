@@ -30,7 +30,5 @@
 **404**{%- else %}[404]({{ site.baseurl }}/{{ _404 }})
 {%- endif %}
 
-{{ thin_hr }}
-
 {% comment %}
 {% endcomment %}

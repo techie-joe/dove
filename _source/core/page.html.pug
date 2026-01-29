@@ -3,11 +3,8 @@ block append vars
   - path   = 'page.html'
   - title  = `Page`
   - description = 'Page template in html.'
-block footer
+block prepend footer
   +include('page_footer','page_footer.md')  
-  +thin_hr
-  p: code // site footer
-  +_edit_link
 block content
   h1 Page title
   p: code // page sample written in html
