@@ -3,10 +3,12 @@ block append vars
   - path   = 'post.html'
   - title  = `Post`
   - description = 'Post template in html.'
-block prepend footer
+block footer
   +include('post_footer','post_footer.md')  
-block content
-  h1 Post title
-  p: code // post sample written in html
   +thin_hr
-  +include('vars_page','dove/vars_page.md')
+  p: code // site footer
+  +thin_hr
+  nav._common_nav: .mv: +sample_nav(layout_name)
+  +_edit_link
+block content
+  +sample_post

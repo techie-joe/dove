@@ -8,14 +8,14 @@ description   : A theme development project.
 # description : Short description of your site.
 author        : Techie Joe
 
-version       : '0.0.10'
-revision      : '2601.10'
+version       : 0.0.10
+revision      : 2601.10
 
-baseurl       : '/dove'
-home_url      : '/dove'
-live_url      : 'https://techie-joe.github.io/dove'
+baseurl       : /dove
+home_url      : /dove
+live_url      : https://techie-joe.github.io/dove
 
-lang          : 'en-US'
+lang          : en-US
 
 ghost: bG9jYWxob3N0OjQwMDAsdGVjaGllLWpvZS5naXRodWIuaW8
 # ghost: 'your-tracking-id'

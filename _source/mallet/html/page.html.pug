@@ -1,0 +1,14 @@
+extends _html
+block append vars
+  - path   = 'page.html'
+  - title  = `Page`
+  - description = 'Page template in html.'
+block footer
+  +include('page_footer','page_footer.md')
+  +thin_hr
+  p: code // site footer
+  +thin_hr
+  nav._common_nav: .mv: +sample_nav(layout_name)
+  +_edit_link
+block content
+  +sample_page

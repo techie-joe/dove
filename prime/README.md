@@ -2,7 +2,7 @@
 
 ## 🦅 Prime is a Jekyll theme for GitHub Pages
 
-**[Preview the theme](./preview)** to see how it looks and **[start using it](./#how-to-use)** today!
+**[Preview the theme](preview.html)** to see how it looks and **[start using it](#how-to-use)** today!
 
 ```yml
 remote_theme: techie-joe/prime
@@ -10,8 +10,8 @@ remote_theme_version  : {{ site.version }}
 remote_theme_revision : {{ site.revision }}
 ```
 
-<a href="./preview" title="See how the template looks." class="button primary" style="padding:.5em 1em;font-size:1.2rem;">Preview</a>
-<a href="./samples" title="See how you can use this template to build your website." class="button secondary" style="padding:.5em 1em;font-size:1.2rem;font-weight:normal;">Samples</a>
+<a href="preview.html" title="See how the template looks." class="button primary" style="padding:.5em 1em;font-size:1.2rem;">Preview</a>
+<a href="samples.html" title="See how you can use this template to build your website." class="button secondary" style="padding:.5em 1em;font-size:1.2rem;font-weight:normal;">Samples</a>
 
 ## Build faster on GitHub Pages
 

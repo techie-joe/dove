@@ -126,7 +126,7 @@ mixin sn(ref)
   else
     +a(['{{ site.baseurl }}',ref].join('/')): block
 
-mixin samples_nav(ref)
+mixin demo_nav(ref)
   +sn(ref+"/")| About
   +bull
   +sn(ref+"/preview")| Preview
@@ -134,9 +134,14 @@ mixin samples_nav(ref)
   +sn(ref+"/samples")| Samples
 
 mixin test_nav(ref)
-  +sn(ref+"/test_colors")| Colors
+  +sn(ref+"/colors")| Colors
   +bull
-  +sn(ref+"/test_code-blocks")| Code blocks
+  +sn(ref+"/code-blocks")| Code blocks
+
+mixin sample_nav(ref)
+  +sn(ref+"/samples")| Samples
+  +angle
+  +site_nav(ref+'/html')
 
 mixin site_nav(ref)
   +sn(ref+"/home")| Home
@@ -172,5 +177,17 @@ mixin sample_home
   a(href="#CTA2" onclick="event.preventDefault();" title="Secondary call to action." class="button secondary" style="padding:.5em 1em;font-size:1rem;font-weight:normal;") Learn more
   +thin_hr
   p: code // home page sample written in html
+  +thin_hr
+  +include('vars_page','dove/vars_page.md')
+
+mixin sample_page
+  h1 Page title
+  p: code // page sample written in html
+  +thin_hr
+  +include('vars_page','dove/vars_page.md')
+
+mixin sample_post
+  h1 Post title
+  p: code // post sample written in html
   +thin_hr
   +include('vars_page','dove/vars_page.md')

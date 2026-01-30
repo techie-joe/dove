@@ -1,4 +1,4 @@
-extends _html_samples
+extends _html
 block append vars
   - path   = 'samples.html'
   - title  = `Samples`
@@ -21,7 +21,7 @@ block content
   nav.mv
     b Html
     +itext|:
-    +site_nav(layout_name)
+    +site_nav(layout_name+'/html')
   nav.mv
     b Md
     +itext|:
@@ -30,12 +30,10 @@ block content
   div(style="margin-top:3rem")
 
   h2 Miscellaneous
-  nav.mv
-    +test_nav(layout_name)
+  nav.mv: +test_nav(layout_name+'/test')
 
   +if_dev
     +thin_hr
-    nav.mv
-      +sn(layout_name+"/test")| Test page
+    nav.mv: +sn(layout_name+'/test')| Test page
 
   div(style="margin-top:3rem")
