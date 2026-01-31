@@ -18,16 +18,17 @@ live_url      : https://techie-joe.github.io/dove
 lang          : en-US
 
 ghost: bG9jYWxob3N0OjQwMDAsdGVjaGllLWpvZS5naXRodWIuaW8
-# ghost: 'your-tracking-id'
+# ghost: your-tracking-id
 # to track your ThemeJs.
 
-# google_analytics: 'your-tracking-id'
+# google_analytics: your-tracking-id
 # to track your website using Google Analytics.
 
-# cloudflare_analytics: 'your-tracking-id'
+# cloudflare_analytics: your-tracking-id
 # to track your website using Cloudflare Analytics.
 
-# show_downloads: true/false
+# show_downloads: true
+# true or false (unquoted).
 # to indicate whether to provide a download URL.
 
 # github:
