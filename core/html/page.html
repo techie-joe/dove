@@ -1,5 +1,4 @@
 ---
-index: false
 sample: true
 layout: raw
 use_pug: true
@@ -40,8 +39,7 @@ description: Page template in html.
       <main class="_view">
         <div class="_layout _main_layout">
           <header class="_header">
-            <div class="_layout _header_layout">
-              <div class="h1">{% include dove/logo.html name="core" %}</div>
+            <div class="_layout _header_layout">{%- capture header %}{%- include header.md  %}{%- endcapture %}{{ header  }}
             </div>
           </header>
           <nav class="_nav">
@@ -49,7 +47,7 @@ description: Page template in html.
               <div class="mv"><a href="{{ site.baseurl }}/core/samples">Samples</a><i class="icon"><i class="isvg">
                     <svg viewBox="0 0 24 24">
                       <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                    </svg></i></i><a href="{{ site.baseurl }}/core/html/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/404">404</a>
+                    </svg></i></i><a href="{{ site.baseurl }}/core/html/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><b>Page</b><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/404">404</a>
               </div>
               <hr class="thin"/>
             </div>
@@ -70,13 +68,13 @@ description: Page template in html.
                 <div class="mv"><a href="{{ site.baseurl }}/core/samples">Samples</a><i class="icon"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i><a href="{{ site.baseurl }}/core/html/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/page">Page</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/404">404</a>
+                      </svg></i></i><a href="{{ site.baseurl }}/core/html/home">Home</a><i class="icon"><i class="itext">&bull;</i></i><b>Page</b><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/post">Post</a><i class="icon"><i class="itext">&bull;</i></i><a href="{{ site.baseurl }}/core/html/404">404</a>
                 </div>
               </nav>
               <hr class="thin"/>
               <p class="text-right text-grey"><small>
                   This site is open source.
-                  <a href="{{ site.github.repository_url }}/edit/main/_source/core/page.html.pug">Improve this page</a>.</small></p>
+                  <a href="{{ site.github.repository_url }}/edit/main/_source/core/html/page.html.pug">Improve this page</a>.</small></p>
             </div>
           </footer>
         </div>

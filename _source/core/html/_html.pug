@@ -1,4 +1,9 @@
-extends ../_html
+extends /_source/_layouts/core
+block append update_vars
+  include ../_icon
+  - path = [layout_name+'/html',path].join('/')
+block prepend front_matter
+  +l| sample: true
 block nav
   .mv: +sample_nav(layout_name)
   +thin_hr

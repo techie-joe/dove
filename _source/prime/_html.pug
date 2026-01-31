@@ -1,10 +1,9 @@
 extends /_source/_layouts/prime
 block append update_vars
-  - icon = '🦅'
+  include _icon
   - path = [layout_name,path].join('/')
 block prepend front_matter
   +l| index: false
-  +l| sample: true
 block header
   .h1|{% include dove/logo.html name="!{layout_name}" %}
 block nav

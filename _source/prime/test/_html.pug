@@ -1,4 +1,11 @@
-extends ../_html
+extends /_source/_layouts/prime
+block append update_vars
+  include ../_icon
+  - path = [layout_name+'/test',path].join('/')
+block prepend front_matter
+  +l| index: false
+block header
+  .h1|{% include dove/logo.html name="!{layout_name}" %}
 block nav
   .mv: +demo_nav(layout_name)
   +thin_hr
