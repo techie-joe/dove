@@ -3,6 +3,7 @@ block append update_vars
   include ../_icon
   - path = [layout_name+'/html',path].join('/')
 block prepend front_matter
+  +l| index: false
   +l| sample: true
 block nav
   .mv: +sample_nav(layout_name)
