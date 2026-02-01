@@ -2,12 +2,12 @@
 
 **Test**
 {{- angle -}}
-{% if page.path == 'test_md.md' -%}
-**Markdown**{%- else %}[Markdown]({{ site.baseurl }}/test_md)
+{% if page.path == 'test/md.md' -%}
+**Markdown**{%- else %}[Markdown]({{ site.baseurl }}/test/md)
 {%- endif %}
 {{- bull -}}
-{% if page.path == 'test_pug.html' -%}
-**Pug**{%- else %}[Pug]({{ site.baseurl }}/test_pug)
+{% if page.path == 'test/pug.html' -%}
+**Pug**{%- else %}[Pug]({{ site.baseurl }}/test/pug)
 {%- endif %}
 
 {%- comment %}

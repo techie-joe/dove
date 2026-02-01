@@ -56,16 +56,18 @@ block content
     +thin_hr
     +capture('nav_test')
       +l|{% include dove/test_nav.md %}
-      +l|{{- bull -}} [404]('404')
+      +l|{{- bull -}} [404](404)
     |{{ nav_test | markdownify }}
   +thin_hr
-  +capture('dove_footer')
+  +capture('dove_nav')
     +l|**Dove**
     +l|{{- angle -}}
-    +l|[Repository](https://github.com/techie-joe/dove){: target="_dove_repository" }
+    +l|[Repository](https://github.com/techie-joe/dove){: target="github.com/techie-joe/dove" }
     +l|{{- bull -}}
-    +l|[Proto](https://techie-joe.github.io/proto){: target="_proto" }
-  |{{ dove_footer | markdownify }}
+    +l|[Proto](https://techie-joe.github.io/proto){: target="techie-joe.github.io/proto" }
+    +l|{{- bull -}}
+    +l|[ThemeJs](https://techie-joe.github.io/nova/site/themejs){: target="techie-joe.github.io/nova" }
+  |{{ dove_nav | markdownify }}
   +thin_hr
   h3 Configurations
   +include('config','dove/config.md')

@@ -31,7 +31,7 @@ Collections allows you to define **your own**{: .text-purple } groupings.
 
 ###### site.categories
 
-Categories organizes your **Posts**{: .text-purple } into groups.
+Categories organizes your **[Posts](posts)** into groups.
 {: .small }
 
 ```yml
@@ -64,7 +64,7 @@ Categories organizes your **Posts**{: .text-purple } into groups.
 
 ###### site.tags
 
-Tags are granular keywords that describes your **Posts**{: .text-purple }.
+Tags are granular keywords that describes your **[Posts](posts)**.
 {: .small }
 
 ```yml

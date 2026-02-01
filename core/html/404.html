@@ -40,7 +40,8 @@ description: We can't find what you are looking for.
       <main class="_view">
         <div class="_layout _main_layout">
           <header class="_header">
-            <div class="_layout _header_layout">{%- capture header %}{%- include header.md  %}{%- endcapture %}{{ header  }}
+            <div class="_layout _header_layout">
+              <div class="h1">{% include dove/logo.html name="core" %}</div>
             </div>
           </header>
           <nav class="_nav">

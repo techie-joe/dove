@@ -1,8 +1,8 @@
 {%- include ui.html %}
-{%- if site.github.repository_nwo == 'techie-joe/dove' %}
-{%- include dove/footer.md %}
-{%- elsif page.use_footer == false -%}
+{%- if page.use_footer == false -%}
 <style>._footer{display:none !important}</style>
+{%- elsif site.github.repository_nwo == 'techie-joe/dove' %}
+{%- include dove/footer.md %}
 {%- else %}
 {%- unless page.use_footer contains 'edit_link_only' -%}
 

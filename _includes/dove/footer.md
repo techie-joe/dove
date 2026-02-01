@@ -1,7 +1,4 @@
 {%- include ui.html %}
-{%- if page.use_footer == false -%}
-<style>._footer{display:none !important}</style>
-{%- else %}
 {%- unless page.use_footer contains 'edit_link_only' or page.dir == '/vars/' -%}
 {%- if page.sample -%}
 
@@ -9,13 +6,11 @@
 
 `// site footer`
 
-{%- assign _sub = page.layout | remove: '-page'| remove: '-post' %}
-{%- case _sub %}
-{%- when 'core' or 'mallet' or 'prime' %}
 {{ thin_hr }}
+
+{%- assign _sub = page.layout | remove: '-page'| remove: '-post' %}
 {%- capture sample_nav %}{%- include dove/sample_nav.md sub=_sub %}{%- endcapture %}
 <nav class="_common_nav">{{ sample_nav | markdownify }}</nav>
-{%- endcase %}
 
 {%- else %}
 
@@ -36,5 +31,3 @@
 
 This site is open source. {% github_edit_link "Improve this page" %}.
 {: .text-right.text-gray.small }
-
-{%- endif %}
