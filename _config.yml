@@ -61,17 +61,17 @@ exclude:
   - ".sass-cache"
   - ".jekyll-cache"
   - ".jekyll-metadata"
+  - ".bundle"
   - "*.gem"
   - "*.gemspec"
   - Gemfile
   - Gemfile.lock
-  - ".bundle"
-  - vendor
   - script
+  - vendor
   - node_modules
+  - gulpfile.js
   - package-lock.json
   - package.json
-  - gulpfile.js
   - CNAME
   - "*.x"
   - "*.ignore"
