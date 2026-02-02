@@ -1,5 +1,5 @@
 #!/bin/sh
-# Build a preview of the theme
+# Build the theme then watch for changes.
 
 set -e
 

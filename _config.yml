@@ -9,7 +9,7 @@ description   : A theme development project.
 author        : Techie Joe
 
 version       : 0.1.0
-revision      : 2601.31
+revision      : 2602.2
 
 baseurl       : /dove
 home_url      : /dove
@@ -53,7 +53,7 @@ plugins:
   # - jekyll-feed
   # - jemoji
 
-# exclude these from Jekyll production (_site).
+# exclude these from production (_site).
 exclude:
   - ".editorconfig"
   - ".github"

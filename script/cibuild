@@ -1,4 +1,6 @@
 #!/bin/sh
+# Build the site.
+# Ensure the site were build successfully.
 
 set -e
 

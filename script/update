@@ -1,11 +1,6 @@
 #!/bin/sh
-# Update NPM dependencies
+# Update dependencies.
 
-set -ex
+set -e
 
-rm -Rf _sass/dove-*
-
-npm update
-npx dove-sync _sass
-
-rm -rf node_modules
+bundle update
