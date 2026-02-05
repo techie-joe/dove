@@ -8,7 +8,7 @@
 
 Get a **quick and easy way to build a website**. Build your website on GitHub Pages using **ready-to-go templates and components**. You can use **Markdown**, **Pug** or **HTML** to code your website. Set and style any page instantly, just by referring to our pre-configured assets. Should you require any further personalization, you can customize every detail as needed, from global defaults to specific components.
 
-> **Dove handles the necessary foundation so you can focus on your code.**
+> **We handles the necessary foundation so you can focus on your code.**
 
 > [!WARNING]  
 > **Dove is constantly under active development. Do not use it directly. Beta builds may break your site. Instead, visit individual theme's homepage for a stable release.**
