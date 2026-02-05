@@ -1,6 +1,6 @@
 # About the Dove project
 
-🕊️ **Dove** is a theme development project. We are working on the following themes.
+🕊️ **Dove** is a Jekyll theme development project. We are currently working on the following themes.
 
 - **[techie-joe/core](https://github.com/techie-joe/core)**
 - **[techie-joe/mallet](https://github.com/techie-joe/mallet)**
