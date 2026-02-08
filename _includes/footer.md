@@ -6,9 +6,14 @@
 {%- else %}
 {%- unless page.use_footer contains 'edit_link_only' -%}
 
+{%- unless page.path == '404.md'
+        or page.path == 'index.md'
+        or page.path == 'pages.md'
+        or page.path == 'posts.md' %}
+{%- capture site_nav %}{%- include site_nav.md %}{%- endcapture %}
 {{ thin_hr }}
-
-<!-- your footer goes here -->
+<nav class="_common_nav">{{ site_nav | markdownify }}</nav>
+{%- endunless %}
 
 {%- endunless %}
 

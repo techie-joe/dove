@@ -5,7 +5,6 @@
 {%- include dove/logo.html %}
 {%- else %}
 
-<!-- your header goes here -->
 {%- include logo.html %}
 
 {%- endif %}

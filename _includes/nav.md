@@ -5,8 +5,8 @@
 {%- include dove/nav.md %}
 {%- else %}
 
-<!-- your nav goes here -->
-<style>._nav{display:none !important}</style>
+{%- include site_nav.md %}
+{{ thin_hr }}
 
 {%- endif %}
 {% comment %} --- end of page --- {% endcomment %}
