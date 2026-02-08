@@ -1,17 +1,17 @@
 # About the Dove project
 
-🕊️ **Dove** is a theme development project. We are working on the following themes.
+🕊️ **Dove** is a Jekyll theme development project. We are currently working on the following themes.
 
 - **[techie-joe/core](https://github.com/techie-joe/core)**
 - **[techie-joe/mallet](https://github.com/techie-joe/mallet)**
 - **[techie-joe/prime](https://github.com/techie-joe/prime)**
 
-Get a **quick and easy way to build a website**. Build your website on GitHub Pages using **ready-to-go templates and components**. You can use **Markdown**, **Pug** or **HTML** to code your website. Set and style any page instantly, just by referring to the pre-configured assets. Should you require any further personalization, you can customize every detail as needed, from global defaults to specific components.
+Get a **quick and easy way to build a website**. Build your website on GitHub Pages using **ready-to-go templates and components**. You can use **Markdown**, **Pug** or **HTML** to code your website. Set and style any page instantly, just by referring to our pre-configured assets. Should you require any further personalization, you can customize every detail as needed, from global defaults to specific components.
 
-> **Dove handles the necessary foundation so you can focus on your code.**
+> **We handles the necessary foundation so you can focus on your code.**
 
 > [!WARNING]  
-> **Dove is constantly under active development. Do not use it directly. Beta builds may break your site. Instead, visit individual theme's homepage for a stable release.**
+> **Dove is constantly under active development. Beta builds may break your site without you noticing. Do not use them directly. Instead, visit individual theme's homepage for a stable release.**
 
 ## How to use
 
