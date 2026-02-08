@@ -6,6 +6,7 @@
 {%- else %}
 {%- unless page.use_footer contains 'edit_link_only' -%}
 
+<!-- your footer goes here -->
 {%- unless page.path == '404.md'
         or page.path == 'index.md'
         or page.path == 'pages.md'

@@ -5,6 +5,7 @@
 {%- include dove/nav.md %}
 {%- else %}
 
+<!-- your nav goes here -->
 {%- include site_nav.md %}
 {{ thin_hr }}
 
